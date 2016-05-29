@@ -1,6 +1,7 @@
 package com.katran.objectcreator;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +14,16 @@ import java.io.IOException;
  */
 
 public class ObjectCreatorServlet extends HttpServlet {
+
+    @Autowired
+    private ObjectAssemblyService assemblyService;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext (this);
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
@@ -21,10 +32,9 @@ public class ObjectCreatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-        ObjectAssemblyService assemblyService = (ObjectAssemblyService) context.getBean("ObjectAssemblyService");
+        AssembledObject createdSimpleObject = assemblyService.assemblyOfObject(req.getParameter("quality-of-material"), req.getParameter("type-of-material"), req.getParameter("type-of-object"));
 
-        req.setAttribute("createdObject", assemblyService.assemblyOfObject(req.getParameter("quality-of-material"), req.getParameter("type-of-material"), req.getParameter("type-of-object")));
+        req.setAttribute("createdObject", createdSimpleObject.toString());
         req.getRequestDispatcher("/start-point.jsp").include(req, resp);
     }
 }

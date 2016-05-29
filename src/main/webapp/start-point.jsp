@@ -11,7 +11,7 @@
     <title>Start of creating</title>
 </head>
 <body>
-<form action="obj-creator" , method="post">
+<form action="web-object-creator" , method="post">
     Quality of material:
     <select name="quality-of-material">
         <option disabled>Choose the value</option>
