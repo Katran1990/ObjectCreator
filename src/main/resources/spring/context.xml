@@ -7,4 +7,10 @@
     <context:annotation-config/>
 
     <bean id="assemblyService" class="com.katran.objectcreator.ObjectAssemblyService"/>
+
+    <bean id="DBCService" class="com.katran.objectcreator.DatabaseConnectionService">
+        <property name="user" value="root"/>
+        <property name="dbURL" value="jdbc:mysql://localhost:3306/web_object_creator"/>
+        <property name="password" value="root"/>
+    </bean>
 </beans>
