@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Created by Boris on 24.05.2016.
@@ -16,7 +17,10 @@ import java.io.IOException;
 public class ObjectCreatorServlet extends HttpServlet {
 
     @Autowired
-    private ObjectAssemblyService assemblyService;
+    public ObjectAssemblyService assemblyService;
+
+    @Autowired
+    public ObjectDAO dao;
 
     @Override
     public void init() throws ServletException {
@@ -33,6 +37,11 @@ public class ObjectCreatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         AssembledObject createdSimpleObject = assemblyService.assemblyOfObject(req.getParameter("quality-of-material"), req.getParameter("type-of-material"), req.getParameter("type-of-object"));
+        try {
+            dao.addObject(createdSimpleObject.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         req.setAttribute("createdObject", createdSimpleObject.toString());
         req.getRequestDispatcher("/start-point.jsp").include(req, resp);
