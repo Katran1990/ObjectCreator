@@ -2,19 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a4106d-ecf7-4d5a-93a1-f5dc137468c2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_2.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectAssemblyService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/WebObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/WebObjectDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/AssembledObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/DatabaseConnectionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/ObjectAssemblyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/ObjectCreatorServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/ObjectDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/AssembledObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/DatabaseConnectionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/ObjectAssemblyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/ObjectCreatorServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/ObjectDAO.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator.war" afterPath="$PROJECT_DIR$/target/WebObjectCreator.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/objectcreator/ObjectCreatorServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/objectcreator/ObjectCreatorServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ObjectCreator_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ObjectCreator_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObjectCreator.iml" afterPath="$PROJECT_DIR$/ObjectCreator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/context.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/spring/context.xml" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/spring/context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/context.xml" afterPath="$PROJECT_DIR$/target/classes/spring/context.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
@@ -50,21 +63,11 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - web_object_creator@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - web_object_creator@localhost" />
+        <option name="myItemId" value="MySQL - object_assembler@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="created_object_list" />
+        <option name="myItemId" value="object_list" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -76,13 +79,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="DatabaseConnectionService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
                 <element signature="docComment;class#DatabaseConnectionService#0" expanded="false" />
                 <element signature="method#init#0;class#DatabaseConnectionService#0" expanded="false" />
+                <element signature="e#652#653#0" expanded="false" />
+                <element signature="e#684#685#0" expanded="false" />
+                <element signature="e#732#733#0" expanded="false" />
+                <element signature="e#772#773#0" expanded="false" />
+                <element signature="e#812#813#0" expanded="false" />
+                <element signature="e#844#845#0" expanded="false" />
+                <element signature="e#885#886#0" expanded="false" />
+                <element signature="e#918#919#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,71 +102,51 @@
       <file leaf-file-name="context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state vertical-scroll-proportion="-8.961538">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAO.java">
+      <file leaf-file-name="WebObjectDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
               <folding>
-                <marker date="1464892418446" expanded="true" signature="756:838" placeholder="INSERT INTO created_object_list... " />
-                <marker date="1464892418446" expanded="true" signature="756:840" placeholder="INSERT INTO created_object_list... " />
-                <marker date="1464892418446" expanded="true" signature="762:820" placeholder="insert into created_object_list... " />
-                <marker date="1464892418446" expanded="true" signature="762:824" placeholder="insert into created_object_list... " />
-                <marker date="1464892418446" expanded="true" signature="762:838" placeholder="insert into created_object_list... " />
+                <marker date="1464900630419" expanded="true" signature="343:391" placeholder="INSERT INTO object_list... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectCreatorServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+      <file leaf-file-name="object_assembler.object_list" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/83d128e8/0c63feef-f925-4add-b539-dfede4169e2c/object_assembler.object_list">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectCreatorServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3901809">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#ObjectCreatorServlet#0" expanded="false" />
                 <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
+                <element signature="method#doGet#0;class#ObjectCreatorServlet#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssembledObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/AssembledObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding>
-                <element signature="method#AssembledObject#1;class#AssembledObject#0" expanded="false" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectAssemblyService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectAssemblyService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.923077">
-              <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -194,13 +185,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/start-point.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DAOService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/context.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/ddd.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java" />
         <option value="dbtable:/83d128e8/0c63feef-f925-4add-b539-dfede4169e2c/web_object_creator.created_object_list" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/WebObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/WebObjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectCreator/WebObjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectCreator/ObjectCreatorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/objectCreator/servlet/ObjectCreatorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
       </list>
     </option>
   </component>
@@ -238,6 +236,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="com.katran.web-object-creator" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.katran.web-object-creator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -313,10 +325,6 @@
               <option name="myItemId" value="ObjectCreator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -373,10 +381,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -426,7 +430,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="objectcreator" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ObjectCreator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ObjectCreator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,14 +482,14 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.katran.objectcreator" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Boris\IdeaProjects\ObjectCreator\src\main\resources" />
       <recent name="C:\Users\Boris\IdeaProjects\ObjectCreator\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\Boris\IdeaProjects\ObjectCreator\src\main\resources\spring" />
       <recent name="C:\Users\Boris\IdeaProjects\ObjectCreator\src\main\webapp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.katran.objectcreator" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.remote">
@@ -1083,7 +1117,7 @@
       <workItem from="1464807432748" duration="5178000" />
       <workItem from="1464875453572" duration="771000" />
       <workItem from="1464879366083" duration="15000" />
-      <workItem from="1464879906176" duration="8499000" />
+      <workItem from="1464879906176" duration="15528000" />
     </task>
     <task id="LOCAL-00001" summary="new annotation @Autowired">
       <created>1464544672727</created>
@@ -1101,7 +1135,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85901000" />
+    <option name="totallyTimeSpent" value="92930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1120,9 +1154,10 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34640524" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26399395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1301059" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1133,7 +1168,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1162,14 +1196,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
@@ -1190,7 +1217,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1211,7 +1238,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1232,7 +1259,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
@@ -1253,7 +1280,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="31" />
@@ -1302,7 +1329,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
@@ -1323,7 +1350,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -1372,13 +1399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2283237">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36102235">
@@ -1418,19 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="744" column="0" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/83d128e8/0c63feef-f925-4add-b539-dfede4169e2c/web_object_creator.source_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,87 +1486,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectAssemblyService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.34931508">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="method#WebObject#1;class#WebObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34931508">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1695204">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.923077">
+        <state vertical-scroll-proportion="1.2491039">
           <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/83d128e8/0c63feef-f925-4add-b539-dfede4169e2c/web_object_creator.created_object_list">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7616488">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/DatabaseConnectionService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding>
             <element signature="docComment;class#DatabaseConnectionService#0" expanded="false" />
             <element signature="method#init#0;class#DatabaseConnectionService#0" expanded="false" />
+            <element signature="e#652#653#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#812#813#0" expanded="false" />
+            <element signature="e#844#845#0" expanded="false" />
+            <element signature="e#885#886#0" expanded="false" />
+            <element signature="e#918#919#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#ObjectCreatorServlet#0" expanded="false" />
+            <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
+            <element signature="method#doGet#0;class#ObjectCreatorServlet#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state vertical-scroll-proportion="-8.961538">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/AssembledObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
           <folding>
-            <element signature="method#AssembledObject#1;class#AssembledObject#0" expanded="false" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
+            <marker date="1464900630419" expanded="true" signature="343:391" placeholder="INSERT INTO object_list... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1464892418446" expanded="true" signature="756:838" placeholder="INSERT INTO created_object_list... " />
-            <marker date="1464892418446" expanded="true" signature="756:840" placeholder="INSERT INTO created_object_list... " />
-            <marker date="1464892418446" expanded="true" signature="762:820" placeholder="insert into created_object_list... " />
-            <marker date="1464892418446" expanded="true" signature="762:824" placeholder="insert into created_object_list... " />
-            <marker date="1464892418446" expanded="true" signature="762:838" placeholder="insert into created_object_list... " />
-          </folding>
+    <entry file="dbDummy://dbtable:/83d128e8/0c63feef-f925-4add-b539-dfede4169e2c/object_assembler.object_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectCreatorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3901809">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
