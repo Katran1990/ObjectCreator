@@ -15,6 +15,7 @@ public class DatabaseConnectionService {
 
     private Connection connection;
 
+
     @PostConstruct
     public void init(){
         try {

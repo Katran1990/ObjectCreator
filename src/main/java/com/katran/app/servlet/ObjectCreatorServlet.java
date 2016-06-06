@@ -37,10 +37,10 @@ public class ObjectCreatorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         WebObject createdSimpleObject = assemblyService.assemblyOfObject(req.getParameter("quality-of-material"), req.getParameter("type-of-material"), req.getParameter("type-of-object"));
         try {dao.addObject(createdSimpleObject);
-        } catch (SQLException e) {e.printStackTrace();}
+        } catch (SQLException e) {
+            e.printStackTrace();}
 
         req.setAttribute("createdObject", createdSimpleObject.toString());
         req.getRequestDispatcher("/start-point.jsp").include(req, resp);

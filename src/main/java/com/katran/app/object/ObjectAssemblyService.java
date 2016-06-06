@@ -5,10 +5,9 @@ package com.katran.app.object;
  */
 
 public class ObjectAssemblyService {
-    public ObjectAssemblyService(){
-    }
 
     public WebObject assemblyOfObject(String quality, String material, String object) {
-        return new WebObject(quality+" "+material+" "+object);
+        WebObject webObject = new WebObject(quality+" "+material+" "+object);
+        return webObject;
     }
 }
