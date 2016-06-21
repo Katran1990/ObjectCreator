@@ -75,7 +75,7 @@ public class ObjectCreatorServlet extends HttpServlet {
         } catch (SQLException e) {e.printStackTrace();}
 
         req.setAttribute("createdObject", createdSimpleObject.toString());
-        req.getRequestDispatcher("/start-point.jsp").include(req, resp);
+        req.getRequestDispatcher("/start-point.jsp").forward(req, resp);
     }
 
 }

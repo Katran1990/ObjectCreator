@@ -85,7 +85,8 @@ public class ObjectAssemblyService {
             if (maxCount > minCount) {
                 minCount = maxCount;
                 component = preparedComponents.get(i);
-            } else {
+            }
+            if (minCount==0){
                 component = preparedComponents.get(getRandomValue(0,preparedComponents.size()-1));
             }
         }

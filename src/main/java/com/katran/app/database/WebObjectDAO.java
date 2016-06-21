@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -131,9 +132,9 @@ public class WebObjectDAO {
     }
 
     public int getNumberOfRowsInTable(String value) throws SQLException {
-        PreparedStatement pstmt = connectionService.getConnection().prepareStatement(GET_NUMBER_OF_ROWS+value);
-        pstmt.setString(1, value);
-        ResultSet rs = pstmt.executeQuery();
+        //String statement = GET_NUMBER_OF_ROWS + value;
+        Statement stmt = connectionService.getConnection().createStatement();
+        ResultSet rs = stmt.executeQuery(GET_NUMBER_OF_ROWS + value);
         int result = 0;
         while (rs.next()){
             result = rs.getInt("total");

@@ -2,58 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a4106d-ecf7-4d5a-93a1-f5dc137468c2" name="Default" comment="&quot;Logging.&quot;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/lib/bootstrap-3.3.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/lib/jquery-1.11.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/js/npm.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/js/npm.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator.war" afterPath="$PROJECT_DIR$/target/WebObjectCreator.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/database/WebObjectDAO.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/database/WebObjectDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/object/ObjectAssemblyService.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/object/ObjectAssemblyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/servlet/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/servlet/ObjectCreatorServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/app/database/WebObjectDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/app/database/WebObjectDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/app/object/ObjectAssemblyService.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/app/object/ObjectAssemblyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/app/servlet/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/app/servlet/ObjectCreatorServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ObjectCreator_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ObjectCreator_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObjectCreator.iml" afterPath="$PROJECT_DIR$/ObjectCreator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/start-point.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/start-point.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/start-point.jsp" afterPath="$PROJECT_DIR$/target/WebObjectCreator/start-point.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="ObjectCreator.iws" />
@@ -116,18 +69,10 @@
       <file leaf-file-name="start-point.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/start-point.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.5">
+            <state vertical-scroll-proportion="-62.115383">
               <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
               <folding>
                 <element signature="e#653#775#0#JSP" expanded="false" />
-                <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#select#0;n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#select#1;n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#select#0;n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#select#1;n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -136,10 +81,12 @@
       <file leaf-file-name="ObjectCreatorServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6948718">
-              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.66923076">
+              <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
               <folding>
                 <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
+                <element signature="e#1713#1721#0" expanded="true" />
+                <element signature="e#1769#1777#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,13 +96,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="85" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#defineTheComponent#0;class#ObjectAssemblyService#0" expanded="false" />
-                <element signature="method#defineTheQuality#0;class#ObjectAssemblyService#0" expanded="false" />
-                <element signature="method#getRandomValue#0;class#ObjectAssemblyService#0" expanded="false" />
-                <element signature="method#getComponentFromList#0;class#ObjectAssemblyService#0" expanded="false" />
+                <element signature="e#2250#2258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,28 +109,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
+              <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
               <folding>
                 <element signature="method#getObjects#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getComponents#0;class#WebObjectDAO#0" expanded="false" />
-                <element signature="e#2049#2057#0" expanded="true" />
                 <element signature="method#getSources#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getObject#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getComponent#0;class#WebObjectDAO#0" expanded="false" />
-                <element signature="method#getSourceQuality#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getSource#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getProductionQuality#0;class#WebObjectDAO#0" expanded="false" />
-                <element signature="method#getNumberOfRowsInTable#0;class#WebObjectDAO#0" expanded="false" />
-                <marker date="1466442302967" expanded="true" signature="402:426" placeholder="SELECT * FRO... components" />
-                <marker date="1466442302967" expanded="true" signature="473:494" placeholder="SELECT * FRO... sources" />
-                <marker date="1466442302967" expanded="true" signature="545:586" placeholder="SELECT * FRO... objects" />
-                <marker date="1466442302967" expanded="true" signature="640:687" placeholder="SELECT * FRO... components" />
-                <marker date="1466442302967" expanded="true" signature="738:781" placeholder="SELECT * FRO... sources" />
-                <marker date="1466442302967" expanded="true" signature="832:873" placeholder="SELECT * FRO... sources" />
-                <marker date="1466442302967" expanded="true" signature="921:1033" placeholder="SELECT * FRO... production_quality" />
-                <marker date="1466442302967" expanded="true" signature="1080:1105" placeholder="SELECT * FRO... object_list" />
-                <marker date="1466442302967" expanded="true" signature="1154:1202" placeholder="INSERT INTO object_list... " />
-                <marker date="1466442302967" expanded="true" signature="1252:1281" placeholder="SELECT COUNT... " />
+                <marker date="1466522422303" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
+                <marker date="1466522422303" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
+                <marker date="1466522422303" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
+                <marker date="1466522422303" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
+                <marker date="1466522422303" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
+                <marker date="1466522422303" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
+                <marker date="1466522422303" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
+                <marker date="1466522422303" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
+                <marker date="1466522422303" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
+                <marker date="1466522422303" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConnectionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <element signature="e#919#920#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -252,9 +205,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b7ffde15-c30e-416c-9748-97f8fc58fa96/console_1.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/start-point.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
       </list>
     </option>
   </component>
@@ -360,6 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -538,8 +493,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1188,7 +1141,8 @@
       <workItem from="1466278354976" duration="6991000" />
       <workItem from="1466337571495" duration="5960000" />
       <workItem from="1466363557095" duration="7939000" />
-      <workItem from="1466433755437" duration="9784000" />
+      <workItem from="1466433755437" duration="9885000" />
+      <workItem from="1466518619913" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="new annotation @Autowired">
       <created>1464544672727</created>
@@ -1206,29 +1160,28 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190268000" />
+    <option name="totallyTimeSpent" value="194128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31699347" sideWeight="0.51059" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11649016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12783661" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31699347" sideWeight="0.48940998" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26143792" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26399395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24205749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23827533" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1238,8 +1191,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1262,13 +1216,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java</url>
+          <line>134</line>
           <properties />
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="46" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1417,20 +1371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar!/com/mysql/jdbc/ConnectionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36102235">
-          <caret line="2862" column="29" selection-start-line="2862" selection-start-column="29" selection-end-line="2862" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar!/com/mysql/jdbc/ResultSetImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.185185">
@@ -1473,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="793.7692">
           <caret line="4" column="106543" selection-start-line="4" selection-start-column="106543" selection-end-line="4" selection-end-column="106543" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,14 +1505,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.objects">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1610,129 +1549,130 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.production_quality">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.sources">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/start-point.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.5">
+        <state vertical-scroll-proportion="-62.115383">
           <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
           <folding>
             <element signature="e#653#775#0#JSP" expanded="false" />
-            <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#div#2;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.components">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
-          <folding>
-            <element signature="method#getObjects#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getComponents#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="e#2049#2057#0" expanded="true" />
-            <element signature="method#getSources#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getObject#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getComponent#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getSourceQuality#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getSource#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getProductionQuality#0;class#WebObjectDAO#0" expanded="false" />
-            <element signature="method#getNumberOfRowsInTable#0;class#WebObjectDAO#0" expanded="false" />
-            <marker date="1466442302967" expanded="true" signature="402:426" placeholder="SELECT * FRO... components" />
-            <marker date="1466442302967" expanded="true" signature="473:494" placeholder="SELECT * FRO... sources" />
-            <marker date="1466442302967" expanded="true" signature="545:586" placeholder="SELECT * FRO... objects" />
-            <marker date="1466442302967" expanded="true" signature="640:687" placeholder="SELECT * FRO... components" />
-            <marker date="1466442302967" expanded="true" signature="738:781" placeholder="SELECT * FRO... sources" />
-            <marker date="1466442302967" expanded="true" signature="832:873" placeholder="SELECT * FRO... sources" />
-            <marker date="1466442302967" expanded="true" signature="921:1033" placeholder="SELECT * FRO... production_quality" />
-            <marker date="1466442302967" expanded="true" signature="1080:1105" placeholder="SELECT * FRO... object_list" />
-            <marker date="1466442302967" expanded="true" signature="1154:1202" placeholder="INSERT INTO object_list... " />
-            <marker date="1466442302967" expanded="true" signature="1252:1281" placeholder="SELECT COUNT... " />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.object_list">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar!/com/mysql/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4814814">
+          <caret line="2857" column="0" selection-start-line="2857" selection-start-column="0" selection-end-line="2857" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#919#920#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="85" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#defineTheComponent#0;class#ObjectAssemblyService#0" expanded="false" />
-            <element signature="method#defineTheQuality#0;class#ObjectAssemblyService#0" expanded="false" />
-            <element signature="method#getRandomValue#0;class#ObjectAssemblyService#0" expanded="false" />
-            <element signature="method#getComponentFromList#0;class#ObjectAssemblyService#0" expanded="false" />
+            <element signature="e#2250#2258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+          <folding>
+            <element signature="method#getObjects#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getComponents#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getSources#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getObject#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getComponent#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getSource#0;class#WebObjectDAO#0" expanded="false" />
+            <element signature="method#getProductionQuality#0;class#WebObjectDAO#0" expanded="false" />
+            <marker date="1466522422303" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
+            <marker date="1466522422303" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
+            <marker date="1466522422303" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
+            <marker date="1466522422303" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
+            <marker date="1466522422303" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
+            <marker date="1466522422303" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
+            <marker date="1466522422303" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
+            <marker date="1466522422303" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
+            <marker date="1466522422303" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
+            <marker date="1466522422303" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6948718">
-          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.66923076">
+          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
           <folding>
             <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
+            <element signature="e#1713#1721#0" expanded="true" />
+            <element signature="e#1769#1777#0" expanded="true" />
           </folding>
         </state>
       </provider>
