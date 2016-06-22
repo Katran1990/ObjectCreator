@@ -132,7 +132,6 @@ public class WebObjectDAO {
     }
 
     public int getNumberOfRowsInTable(String value) throws SQLException {
-        //String statement = GET_NUMBER_OF_ROWS + value;
         Statement stmt = connectionService.getConnection().createStatement();
         ResultSet rs = stmt.executeQuery(GET_NUMBER_OF_ROWS + value);
         int result = 0;

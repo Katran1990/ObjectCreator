@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a4106d-ecf7-4d5a-93a1-f5dc137468c2" name="Default" comment="&quot;Logging.&quot;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/object-creator.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/end-point.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/start-point.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/end-point.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebObjectCreator/start-point.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator.war" afterPath="$PROJECT_DIR$/target/WebObjectCreator.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/database/WebObjectDAO.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/database/WebObjectDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/servlet/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/classes/com/katran/app/servlet/ObjectCreatorServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/app/database/WebObjectDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/app/database/WebObjectDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/katran/app/servlet/ObjectCreatorServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/katran/app/servlet/ObjectCreatorServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WebObjectCreator/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="ObjectCreator.iws" />
@@ -66,28 +77,154 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="start-point.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/start-point.jsp">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-62.115383">
-              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+            <state vertical-scroll-proportion="-1.8461539">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="object-creator.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/object-creator.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6694915">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MAVEN/com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" pinned="false" current-in-tab="false">
+        <entry file="uml://MAVEN/com.katran:com.katran.web-object-creator:1.0-SNAPSHOT">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>MAVEN</ID>
+              <OriginalElement>com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</node>
+                <node x="227.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE</node>
+                <node x="349.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE</node>
+                <node x="469.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+                <node x="349.0" y="39.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-beans:jar:4.2.6.RELEASE</node>
+                <node x="349.0" y="78.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE</node>
+                <node x="472.0" y="78.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE/commons-logging:commons-logging:jar:1.2</node>
+                <node x="227.0" y="117.0">org.springframework:spring-context:jar:4.2.6.RELEASE</node>
+                <node x="366.0" y="117.0">org.springframework:spring-context:jar:4.2.6.RELEASE/org.springframework:spring-expression:jar:4.2.6.RELEASE</node>
+                <node x="227.0" y="156.0">javax.servlet:javax.servlet-api:jar:3.1.0</node>
+                <node x="227.0" y="195.0">javax.servlet:jstl:jar:1.2</node>
+                <node x="227.0" y="234.0">taglibs:standard:jar:1.1.2</node>
+                <node x="227.0" y="273.0">mysql:mysql-connector-java:jar:5.1.38</node>
+                <node x="227.0" y="312.0">log4j:log4j:jar:1.2.17</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="org.springframework:spring-context:jar:4.2.6.RELEASE" target="org.springframework:spring-context:jar:4.2.6.RELEASE/org.springframework:spring-expression:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="log4j:log4j:jar:1.2.17">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="326.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE/commons-logging:commons-logging:jar:1.2">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE/aopalliance:aopalliance:jar:1.0">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="org.springframework:spring-web:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="209.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.38">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="287.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="170.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="taglibs:standard:jar:1.1.2">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="248.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="org.springframework:spring-context:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="98.5" y="131.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-beans:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="273.0" y="53.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE">
+                  <point x="0.0" y="0.0" />
+                  <point x="273.0" y="92.5" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="125.5" y="234.0" />
+              <SelectedNodes>
+                <node>com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</node>
+              </SelectedNodes>
+              <Categories />
+              <VISIBILITY>All</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="created-objects.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/created-objects.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.769231">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectCreatorServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
-                <element signature="e#653#775#0#JSP" expanded="false" />
+                <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectCreatorServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66923076">
-              <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
-              <folding>
-                <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
-                <element signature="e#1713#1721#0" expanded="true" />
-                <element signature="e#1769#1777#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="object_assembler.object_list" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.object_list">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,10 +233,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2250#2258#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="method#WebObject#1;class#WebObject#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,25 +257,24 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+              <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
               <folding>
-                <element signature="method#getObjects#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getComponents#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getSources#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getObject#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getComponent#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getSource#0;class#WebObjectDAO#0" expanded="false" />
                 <element signature="method#getProductionQuality#0;class#WebObjectDAO#0" expanded="false" />
-                <marker date="1466522422303" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
-                <marker date="1466522422303" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
-                <marker date="1466522422303" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
-                <marker date="1466522422303" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
-                <marker date="1466522422303" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
-                <marker date="1466522422303" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
-                <marker date="1466522422303" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
-                <marker date="1466522422303" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
-                <marker date="1466522422303" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
-                <marker date="1466522422303" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
+                <marker date="1466540811668" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
+                <marker date="1466540811668" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
+                <marker date="1466540811668" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
+                <marker date="1466540811668" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
+                <marker date="1466540811668" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
+                <marker date="1466540811668" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
+                <marker date="1466540811668" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
+                <marker date="1466540811668" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
+                <marker date="1466540811668" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
+                <marker date="1466540811668" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
               </folding>
             </state>
           </provider>
@@ -150,10 +297,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -175,8 +322,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/start-point.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/end-point.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/end-point.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/AssembledObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/objectcreator/ObjectAssemblyService.java" />
@@ -197,17 +342,22 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/commons-logging.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/app/database/DatabaseConnectionService.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/app/backup/JSPDropdown.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b7ffde15-c30e-416c-9748-97f8fc58fa96/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/main/webapp/start-point.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/end-point.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/start-point.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java" />
+        <option value="dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.object_list" />
+        <option value="$PROJECT_DIR$/src/main/webapp/created-objects.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/object-creator.jsp" />
       </list>
     </option>
   </component>
@@ -265,9 +415,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -313,7 +462,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -378,6 +526,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -426,74 +578,11 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectCreator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectCreator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectCreator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectCreator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1142,7 +1231,9 @@
       <workItem from="1466337571495" duration="5960000" />
       <workItem from="1466363557095" duration="7939000" />
       <workItem from="1466433755437" duration="9885000" />
-      <workItem from="1466518619913" duration="3759000" />
+      <workItem from="1466518619913" duration="4527000" />
+      <workItem from="1466534059414" duration="5725000" />
+      <workItem from="1466584301919" duration="16534000" />
     </task>
     <task id="LOCAL-00001" summary="new annotation @Autowired">
       <created>1464544672727</created>
@@ -1160,40 +1251,40 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194128000" />
+    <option name="totallyTimeSpent" value="217155000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="0" width="1382" height="728" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31699347" sideWeight="0.51059" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12783661" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31699347" sideWeight="0.48940998" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31543624" sideWeight="0.48940998" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26143792" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26845637" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24205749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23827533" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39765102" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1214,15 +1305,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java</url>
-          <line>134</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1231,27 +1314,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/ServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918">
-          <caret line="215" column="18" selection-start-line="215" selection-start-column="18" selection-end-line="215" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/GenericServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="261" column="19" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36102235">
-          <caret line="750" column="26" selection-start-line="750" selection-start-column="26" selection-end-line="750" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1392,13 +1454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map">
       <provider editor-type-id="sourcemapFileViewerProvider">
         <state />
@@ -1417,16 +1472,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map">
       <provider editor-type-id="sourcemapFileViewerProvider">
         <state />
       </provider>
@@ -1460,13 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1474,32 +1512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/end-point.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27419356">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37362638">
           <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6730769">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1527,14 +1543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321918">
           <caret line="3097" column="25" selection-start-line="3097" selection-start-column="25" selection-end-line="3097" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20376712">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1576,29 +1584,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/start-point.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-62.115383">
-          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
-          <folding>
-            <element signature="e#653#775#0#JSP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.components">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.object_list">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1614,6 +1600,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4814814">
           <caret line="2857" column="0" selection-start-line="2857" selection-start-column="0" selection-end-line="2857" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/ServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="436" column="60" selection-start-line="436" selection-start-column="60" selection-end-line="436" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1153846">
+          <caret line="4982" column="21" selection-start-line="4982" selection-start-column="21" selection-end-line="4982" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.148148">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6715865">
+          <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.501845">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1631,10 +1667,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/ObjectAssemblyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2250#2258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/object/WebObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="method#WebObject#1;class#WebObject#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1642,38 +1687,165 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/database/WebObjectDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
-            <element signature="method#getObjects#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getComponents#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getSources#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getObject#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getComponent#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getSource#0;class#WebObjectDAO#0" expanded="false" />
             <element signature="method#getProductionQuality#0;class#WebObjectDAO#0" expanded="false" />
-            <marker date="1466522422303" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
-            <marker date="1466522422303" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
-            <marker date="1466522422303" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
-            <marker date="1466522422303" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
-            <marker date="1466522422303" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
-            <marker date="1466522422303" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
-            <marker date="1466522422303" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
-            <marker date="1466522422303" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
-            <marker date="1466522422303" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
-            <marker date="1466522422303" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
+            <marker date="1466540811668" expanded="true" signature="429:453" placeholder="SELECT * FRO... components" />
+            <marker date="1466540811668" expanded="true" signature="500:521" placeholder="SELECT * FRO... sources" />
+            <marker date="1466540811668" expanded="true" signature="572:613" placeholder="SELECT * FRO... objects" />
+            <marker date="1466540811668" expanded="true" signature="667:714" placeholder="SELECT * FRO... components" />
+            <marker date="1466540811668" expanded="true" signature="765:808" placeholder="SELECT * FRO... sources" />
+            <marker date="1466540811668" expanded="true" signature="859:900" placeholder="SELECT * FRO... sources" />
+            <marker date="1466540811668" expanded="true" signature="948:1060" placeholder="SELECT * FRO... production_quality" />
+            <marker date="1466540811668" expanded="true" signature="1107:1132" placeholder="SELECT * FRO... object_list" />
+            <marker date="1466540811668" expanded="true" signature="1181:1229" placeholder="INSERT INTO object_list... " />
+            <marker date="1466540811668" expanded="true" signature="1279:1308" placeholder="SELECT COUNT... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/83d128e8/b7ffde15-c30e-416c-9748-97f8fc58fa96/object_assembler.object_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/created-objects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.769231">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/katran/app/servlet/ObjectCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66923076">
-          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <element signature="method#init#0;class#ObjectCreatorServlet#0" expanded="false" />
-            <element signature="e#1713#1721#0" expanded="true" />
-            <element signature="e#1769#1777#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8461539">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.katran:com.katran.web-object-creator:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</node>
+            <node x="227.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE</node>
+            <node x="349.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE</node>
+            <node x="469.0" y="0.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="349.0" y="39.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-beans:jar:4.2.6.RELEASE</node>
+            <node x="349.0" y="78.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE</node>
+            <node x="472.0" y="78.0">org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE/commons-logging:commons-logging:jar:1.2</node>
+            <node x="227.0" y="117.0">org.springframework:spring-context:jar:4.2.6.RELEASE</node>
+            <node x="366.0" y="117.0">org.springframework:spring-context:jar:4.2.6.RELEASE/org.springframework:spring-expression:jar:4.2.6.RELEASE</node>
+            <node x="227.0" y="156.0">javax.servlet:javax.servlet-api:jar:3.1.0</node>
+            <node x="227.0" y="195.0">javax.servlet:jstl:jar:1.2</node>
+            <node x="227.0" y="234.0">taglibs:standard:jar:1.1.2</node>
+            <node x="227.0" y="273.0">mysql:mysql-connector-java:jar:5.1.38</node>
+            <node x="227.0" y="312.0">log4j:log4j:jar:1.2.17</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.springframework:spring-context:jar:4.2.6.RELEASE" target="org.springframework:spring-context:jar:4.2.6.RELEASE/org.springframework:spring-expression:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="log4j:log4j:jar:1.2.17">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="326.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE/commons-logging:commons-logging:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="org.springframework:spring-web:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="209.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.38">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="287.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="170.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="taglibs:standard:jar:1.1.2">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="248.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.katran:com.katran.web-object-creator:1.0-SNAPSHOT" target="org.springframework:spring-context:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="98.5" y="131.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-beans:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="273.0" y="53.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-aop:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:4.2.6.RELEASE" target="org.springframework:spring-web:jar:4.2.6.RELEASE/org.springframework:spring-core:jar:4.2.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="273.0" y="92.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="125.5" y="234.0" />
+          <SelectedNodes>
+            <node>com.katran:com.katran.web-object-creator:1.0-SNAPSHOT</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/object-creator.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6694915">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

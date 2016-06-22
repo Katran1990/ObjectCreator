@@ -44,7 +44,7 @@ public class ObjectCreatorServlet extends HttpServlet {
         }
         req.setAttribute("components", components);
         req.setAttribute("sources", sources);
-        req.getRequestDispatcher("/start-point.jsp").forward(req, resp);
+        req.getRequestDispatcher("/object-creator.jsp").forward(req, resp);
     }
 
     @Override
@@ -75,7 +75,8 @@ public class ObjectCreatorServlet extends HttpServlet {
         } catch (SQLException e) {e.printStackTrace();}
 
         req.setAttribute("createdObject", createdSimpleObject.toString());
-        req.getRequestDispatcher("/start-point.jsp").forward(req, resp);
+        req.getRequestDispatcher("/object-creator.jsp").include(req, resp);
+        doGet(req, resp);
     }
 
 }
