@@ -69,13 +69,17 @@ public class ObjectCreatorServlet extends HttpServlet {
             sources.add(req.getParameter("source3"));
         }
 
-        try {
-            createdSimpleObject = assemblyService.assemblyOfObject(components, sources);
-            dao.addObject(createdSimpleObject);
-        } catch (SQLException e) {e.printStackTrace();}
-
-        req.setAttribute("createdObject", createdSimpleObject.toString());
-        req.getRequestDispatcher("/object-creator.jsp").include(req, resp);
+        if (components.size()>0) {
+            try {
+                createdSimpleObject = assemblyService.assemblyOfObject(components, sources);
+                dao.addObject(createdSimpleObject);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            req.setAttribute("createdObject", createdSimpleObject.toString());
+        } else {
+            req.setAttribute("error", "An input error! Please, select at least one component.");
+        }
         doGet(req, resp);
     }
 

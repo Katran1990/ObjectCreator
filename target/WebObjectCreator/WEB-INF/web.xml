@@ -27,4 +27,14 @@
         <url-pattern>/web-object-creator</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>objectViewerServlet</servlet-name>
+        <servlet-class>com.katran.app.servlet.ObjectViewerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>objectViewerServlet</servlet-name>
+        <url-pattern>/object-viewer</url-pattern>
+    </servlet-mapping>
+
 </web-app>

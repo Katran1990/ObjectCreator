@@ -32,11 +32,17 @@
         }
 
         form.form-inline {
-            padding-top: 80px;
+            padding-top: 60px;
         }
 
         form.form-inline .form-group{
             margin-bottom: 15px;
+        }
+
+        .btn-primary.active{
+            color: #fff;
+            background-color: #222;
+            border-color: #080808;
         }
 
 
@@ -52,7 +58,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">About</a></li>
                 <li class="active"><a href="web-object-creator">Create object</a></li>
-                <li><a href="created-objects.jsp">Created objects</a></li>
+                <li><a href="object-viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
@@ -62,7 +68,12 @@
 
         <div class="container">
             <div class="starter-template">
+
                 <form class="form-inline" action="web-object-creator" method="post">
+                    <div class="form-group has-error">
+                        <label class="control-label">${error}</label>
+                    </div>
+                    <br>
                     <div class="form-group">
                         Type of component:
                         <select class="form-control" name="component1">

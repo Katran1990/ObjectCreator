@@ -45,7 +45,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.jsp">About</a></li>
                 <li><a href="web-object-creator">Create object</a></li>
-                <li><a href="created-objects.jsp">Created objects</a></li>
+                <li><a href="object-viewer">Created objects</a></li>
             </ul>
         </div>
     </div>

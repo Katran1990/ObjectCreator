@@ -5,13 +5,6 @@
   Time: 17:22
   To change this template use File | Settings | File Templates.
 --%>
-<%--
-  Created by IntelliJ IDEA.
-  User: Boris
-  Date: 24.05.2016
-  Time: 19:17
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -34,13 +27,10 @@
         }
 
         .starter-template {
-            padding: 40px 15px;
+            padding: 70px 15px;
             text-align: center;
             top: 0;
         }
-
-
-
     </style>
 </head>
 <body>
@@ -53,16 +43,25 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">About</a></li>
                 <li><a href="web-object-creator">Create object</a></li>
-                <li class="active"><a href="created-objects.jsp">Created objects</a></li>
+                <li class="active"><a href="object-viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="starter-template">
-        <h1>Object creator</h1>
-        <p class="lead">Use this program as a way to quickly create any new object.<br> On the page "Create object" you can create some objects with chosen components and quality.
-            <br> On the page "Created objects" you can see objects that has been created.</p>
+        <table class="table" action="ObjectViewerServlet" method="get">
+            <thead>
+            <tr>Name of the created object</tr>
+            </thead>
+            <tbody>
+            <c:forEach begin="1" step="1" var="object" items="${objects}">
+                <tr>
+                    <td>${object}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
     </div>
 </div>
 <script src="js/bootstrap.min.js"></script>
