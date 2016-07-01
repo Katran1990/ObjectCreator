@@ -10,6 +10,7 @@
 #.idea/jsLibraryMappings.xml
 target/
 *.iml
+*.md
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
