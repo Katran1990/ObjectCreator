@@ -5,16 +5,30 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+    <context:property-placeholder location="classpath*:*/jdbc.properties"/>
+
 
     <bean id="assemblyService" class="com.katran.app.object.ObjectAssemblyService"/>
 
-    <bean id="webObjectDAO" class="com.katran.app.database.WebObjectDAO"/>
+    <!--<bean id="webObjectDAO" class="com.katran.app.database.WebObjectDAO"/>-->
 
-    <bean id="dBCService" class="com.katran.app.database.DatabaseConnectionService">
-        <property name="user" value="root"/>
-        <property name="host" value="jdbc:mysql://localhost:3306/object_assembler"/>
-        <property name="password" value="root"/>
+    <!--<bean id="dBCService" class="com.katran.app.database.DatabaseConnectionService">-->
+        <!--<property name="user" value="root"/>-->
+        <!--<property name="host" value="jdbc:mysql://localhost:3306/object_assembler"/>-->
+        <!--<property name="password" value="root"/>-->
+    <!--</bean>-->
+
+    <bean id="jdbcWebDAO" class="com.katran.app.database.JDBCWebDAO"/>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
 
 </beans>

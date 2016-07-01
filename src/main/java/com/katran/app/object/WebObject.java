@@ -1,5 +1,4 @@
 package com.katran.app.object;
-
 /**
  * Created by Boris on 26.05.2016.
  */

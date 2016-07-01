@@ -1,5 +1,6 @@
 package com.katran.app.object;
 
+import com.katran.app.database.JDBCWebDAO;
 import com.katran.app.database.WebObjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,8 +13,10 @@ import java.util.List;
  */
 
 public class ObjectAssemblyService {
+//    @Autowired
+//    WebObjectDAO dao;
     @Autowired
-    WebObjectDAO dao;
+    JDBCWebDAO dao;
 
     //not ready
     public WebObject assemblyOfObject(List<String> components, List<String> sources) throws SQLException {

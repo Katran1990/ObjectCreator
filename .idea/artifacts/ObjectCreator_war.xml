@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ObjectCreator:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="WebObjectCreator.war">
-      <element id="artifact" artifact-name="ObjectCreator:war exploded" />
-    </root>
-  </artifact>
-</component>

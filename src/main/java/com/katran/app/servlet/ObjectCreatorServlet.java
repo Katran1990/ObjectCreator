@@ -1,5 +1,5 @@
 package com.katran.app.servlet;
-
+import com.katran.app.database.JDBCWebDAO;
 import com.katran.app.database.WebObjectDAO;
 import com.katran.app.object.ObjectAssemblyService;
 import com.katran.app.object.WebObject;
@@ -23,8 +23,10 @@ public class ObjectCreatorServlet extends HttpServlet {
 
     @Autowired
     public ObjectAssemblyService assemblyService;
+//    @Autowired
+//    public WebObjectDAO dao;
     @Autowired
-    public WebObjectDAO dao;
+    public JDBCWebDAO dao;
 
     @Override
     public void init() throws ServletException {

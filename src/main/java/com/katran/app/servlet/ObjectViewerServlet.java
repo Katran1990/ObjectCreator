@@ -1,5 +1,6 @@
 package com.katran.app.servlet;
 
+import com.katran.app.database.JDBCWebDAO;
 import com.katran.app.database.WebObjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -18,8 +19,10 @@ import java.util.List;
  */
 public class ObjectViewerServlet extends HttpServlet {
 
+//    @Autowired
+//    WebObjectDAO dao;
     @Autowired
-    WebObjectDAO dao;
+    JDBCWebDAO dao;
 
     @Override
     public void init() throws ServletException {
