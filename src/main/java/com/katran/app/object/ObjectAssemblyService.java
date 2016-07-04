@@ -1,7 +1,6 @@
 package com.katran.app.object;
 
 import com.katran.app.database.JDBCWebDAO;
-import com.katran.app.database.WebObjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.SQLException;
@@ -13,12 +12,10 @@ import java.util.List;
  */
 
 public class ObjectAssemblyService {
-//    @Autowired
-//    WebObjectDAO dao;
     @Autowired
     JDBCWebDAO dao;
 
-    //not ready
+    //ready
     public WebObject assemblyOfObject(List<String> components, List<String> sources) throws SQLException {
         String component = defineTheComponent(components);
         double quality = defineTheQuality(sources);
@@ -26,7 +23,6 @@ public class ObjectAssemblyService {
         String object = dao.getObject(getRandomValue(1, dao.getNumberOfRowsInTable("objects")));
         return new WebObject(generalQuality + " " + component + " " + object);
     }
-
 
     //ready
     private String defineTheComponent(List<String> components) throws SQLException {
