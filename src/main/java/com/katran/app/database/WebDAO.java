@@ -13,7 +13,9 @@ import java.util.List;
  * Created by Boris on 30.06.2016.
  */
 public interface WebDAO {
+    //ready
     String GET_ALL_OBJECTS = "SELECT name_object FROM object_list";
+    //ready
     String GET_ALL_COMPONENTS = "SELECT name_component FROM components";
     String GET_ALL_SOURCES = "SELECT name_source FROM sources";
     String GET_OBJECT_BY_INDEX = "SELECT name_object FROM objects WHERE id_object = ?";

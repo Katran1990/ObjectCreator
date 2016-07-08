@@ -13,6 +13,7 @@
     </build>
 
     <properties>
+        <org.junit>4.12</org.junit>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.web>4.2.6.RELEASE</spring.web>
         <spring.context>4.2.6.RELEASE</spring.context>
@@ -23,9 +24,21 @@
         <apache.log4j>1.2.17</apache.log4j>
         <apache.dbcp2>2.1.1</apache.dbcp2>
         <spring.jdbc>4.2.5.RELEASE</spring.jdbc>
+        <spring.test>2.5</spring.test>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.test}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${org.junit}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>

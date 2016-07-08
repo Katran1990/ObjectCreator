@@ -5,9 +5,17 @@ package com.katran.app.object;
  */
 public class TestWebObject {
 
+    private int id;
     private String subject;
     private String quality;
     private String material;
+
+    public TestWebObject(int id, String subject, String quality, String material) {
+        this.id = id;
+        this.subject = subject;
+        this.quality = quality;
+        this.material = material;
+    }
 
     public TestWebObject(String subject, String quality, String material) {
         this.subject = subject;
@@ -20,7 +28,7 @@ public class TestWebObject {
 
     @Override
     public String toString() {
-        return subject + " " + quality + " " + material;
+        return quality + " " + material + " " + subject ;
     }
 
     public String getSubject() {
@@ -45,5 +53,13 @@ public class TestWebObject {
 
     public void setMaterial(String material) {
         this.material = material;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,6 +1,8 @@
 package com.katran.app.servlet;
 
+import com.katran.app.database.JDBCTestWebDAO;
 import com.katran.app.database.JDBCWebDAO;
+import com.katran.app.object.TestWebObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
@@ -20,6 +22,9 @@ public class ObjectViewerServlet extends HttpServlet {
     @Autowired
     JDBCWebDAO dao;
 
+    @Autowired
+    JDBCTestWebDAO dao1;
+
     @Override
     public void init() throws ServletException {
         super.init();
@@ -28,10 +33,9 @@ public class ObjectViewerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> objects = null;
-        try {
-            objects = dao.getObjects();
-        } catch (SQLException e) {e.printStackTrace();}
+        List<TestWebObject> objects;
+        objects = dao1.getListOfCompletedSubjects();
+        //objects = dao.getObjects();
 
         req.setAttribute("objects", objects);
         req.getRequestDispatcher("/created-objects.jsp").forward(req, resp);

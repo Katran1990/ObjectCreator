@@ -52,12 +52,16 @@
     <div class="starter-template">
         <table class="table" action="ObjectViewerServlet" method="get">
             <thead>
-            <tr>Name of the created object</tr>
+            <tr>
+                <td>ID</td>
+                <td>Name of object</td>
+            </tr>
             </thead>
             <tbody>
             <c:forEach begin="1" step="1" var="object" items="${objects}">
                 <tr>
-                    <td>${object}</td>
+                    <td>${object.id}</td>
+                    <td>${object.quality} ${object.material} ${object.subject}</td>
                 </tr>
             </c:forEach>
             </tbody>
