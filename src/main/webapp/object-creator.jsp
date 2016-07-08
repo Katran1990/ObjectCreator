@@ -57,8 +57,8 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">About</a></li>
-                <li class="active"><a href="web-object-creator">Create object</a></li>
-                <li><a href="object-viewer">Created objects</a></li>
+                <li class="active"><a href="simple-creator">Create object</a></li>
+                <li><a href="simple-viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="starter-template">
 
-                <form class="form-inline" action="web-object-creator" method="post">
+                <form class="form-inline" action="simple-creator" method="post">
                     <div class="form-group has-error">
                         <label class="control-label">${error}</label>
                     </div>

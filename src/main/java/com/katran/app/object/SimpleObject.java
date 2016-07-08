@@ -3,27 +3,27 @@ package com.katran.app.object;
 /**
  * Created by Boris on 02.07.2016.
  */
-public class TestWebObject {
+public class SimpleObject {
 
     private int id;
     private String subject;
     private String quality;
     private String material;
 
-    public TestWebObject(int id, String subject, String quality, String material) {
+    public SimpleObject(int id, String subject, String quality, String material) {
         this.id = id;
         this.subject = subject;
         this.quality = quality;
         this.material = material;
     }
 
-    public TestWebObject(String subject, String quality, String material) {
+    public SimpleObject(String subject, String quality, String material) {
         this.subject = subject;
         this.quality = quality;
         this.material = material;
     }
 
-    public TestWebObject() {
+    public SimpleObject() {
     }
 
     @Override

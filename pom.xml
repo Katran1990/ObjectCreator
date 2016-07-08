@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.katran</groupId>
-    <artifactId>com.katran.web-object-creator</artifactId>
+    <artifactId>com.katran.simple-creator</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <build>
-        <finalName>WebObjectCreator</finalName>
+        <finalName>SimpleCreator</finalName>
     </build>
 
     <properties>

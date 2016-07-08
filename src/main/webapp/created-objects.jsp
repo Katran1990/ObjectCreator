@@ -31,6 +31,9 @@
             text-align: center;
             top: 0;
         }
+
+
+
     </style>
 </head>
 <body>
@@ -42,23 +45,23 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">About</a></li>
-                <li><a href="web-object-creator">Create object</a></li>
-                <li class="active"><a href="object-viewer">Created objects</a></li>
+                <li><a href="simple-creator">Create object</a></li>
+                <li class="active"><a href="simple-viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="starter-template">
-        <table class="table" action="ObjectViewerServlet" method="get">
-            <thead>
+        <table class="table table-hover" action="simpleViewer" method="get">
+            <thead style="display: table-header-group">
             <tr>
                 <td>ID</td>
                 <td>Name of object</td>
             </tr>
             </thead>
-            <tbody>
-            <c:forEach begin="1" step="1" var="object" items="${objects}">
+            <tbody style="display: table-row-group">
+            <c:forEach begin="0" step="1" var="object" items="${objects}">
                 <tr>
                     <td>${object.id}</td>
                     <td>${object.quality} ${object.material} ${object.subject}</td>

@@ -18,23 +18,23 @@
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>objectCreatorServlet</servlet-name>
-        <servlet-class>com.katran.app.servlet.ObjectCreatorServlet</servlet-class>
+        <servlet-name>simpleCreatorServlet</servlet-name>
+        <servlet-class>com.katran.app.servlet.SimpleCreatorServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>objectCreatorServlet</servlet-name>
-        <url-pattern>/web-object-creator</url-pattern>
+        <servlet-name>simpleCreatorServlet</servlet-name>
+        <url-pattern>/simple-creator</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>objectViewerServlet</servlet-name>
-        <servlet-class>com.katran.app.servlet.ObjectViewerServlet</servlet-class>
+        <servlet-name>simpleViewerServlet</servlet-name>
+        <servlet-class>com.katran.app.servlet.SimpleViewerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>objectViewerServlet</servlet-name>
-        <url-pattern>/object-viewer</url-pattern>
+        <servlet-name>simpleViewerServlet</servlet-name>
+        <url-pattern>/simple-viewer</url-pattern>
     </servlet-mapping>
 
 </web-app>

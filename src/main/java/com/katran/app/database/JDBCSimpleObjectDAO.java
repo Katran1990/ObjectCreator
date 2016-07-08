@@ -1,24 +1,21 @@
 package com.katran.app.database;
 
-import com.katran.app.object.TestWebObject;
+import com.katran.app.object.SimpleObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 /**
  * Created by Boris on 05.07.2016.
  */
-public class JDBCTestWebDAO {
+public class JDBCSimpleObjectDAO {
 
     @Autowired
-    public JdbcTemplate template;
+    private JdbcTemplate template;
 
-    public TestWebObject getCompletedSubjectByIndex(int index){
+    public SimpleObject getCompletedSubjectByIndex(int index){
         return template.queryForObject(
                 "SELECT als.id, s.name, pq.name, m.name " +
                 "FROM all_subjects als, subjects s, production_quality pq, materials m " +
@@ -27,17 +24,17 @@ public class JDBCTestWebDAO {
                 "AND als.quality=pq.id " +
                 "AND als.material=m.id",
                 new Object[]{index},
-                new WebObjectRowMapper());
+                new SimpleObjectRowMapper());
     }
 
-    public List<TestWebObject> getListOfCompletedSubjects(){
+    public List<SimpleObject> getListOfCompletedSubjects(){
         return template.query(
         "SELECT als.id, s.name, pq.name, m.name " +
         "FROM all_subjects als, subjects s, production_quality pq, materials m " +
         "WHERE als.object = s.id " +
         "AND als.quality=pq.id " +
         "AND als.material=m.id",
-        new WebObjectRowMapper());
+        new SimpleObjectRowMapper());
     }
 
     public List<String> getListOfSources(){
@@ -92,16 +89,12 @@ public class JDBCTestWebDAO {
         return template.queryForObject("SELECT name FROM production_quality WHERE production_quality.start_value <= ? AND production_quality.end_value >= ?", new Object[]{value, value},String.class);
     }
 
-
-    public void saveObject(TestWebObject twObject){
+    public void saveObject(SimpleObject twObject){
         template.update(
                 "INSERT INTO all_subjects (object, quality, material) VALUES (?, ?, ?)",
                 this.getSubjectIDByName(twObject.getSubject()),
                 this.getQualityIDByName(twObject.getQuality()),
                 this.getMaterialIDByName(twObject.getMaterial()));
     }
-
-
-
 
 }

@@ -9,9 +9,9 @@
 
     <bean id="assemblyService" class="com.katran.app.object.ObjectAssemblyService"/>
 
-    <bean id="jdbcWebDAO" class="com.katran.app.database.JDBCWebDAO"/>
+    <!--<bean id="jdbcWebDAO" class="com.katran.app.database.JDBCWebDAO"/>-->
 
-    <bean id="jdbcTestWebDAO" class="com.katran.app.database.JDBCTestWebDAO"/>
+    <bean id="jdbcSimpleObjectDAO" class="com.katran.app.database.JDBCSimpleObjectDAO"/>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg name="dataSource" ref="dataSource"/>

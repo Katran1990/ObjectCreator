@@ -1,11 +1,8 @@
 package com.katran.app.servlet;
-import com.katran.app.database.JDBCTestWebDAO;
-import com.katran.app.database.JDBCWebDAO;
+import com.katran.app.database.JDBCSimpleObjectDAO;
 import com.katran.app.object.ObjectAssemblyService;
-import com.katran.app.object.TestWebObject;
-import com.katran.app.object.WebObject;
+import com.katran.app.object.SimpleObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
@@ -21,23 +18,20 @@ import java.util.List;
  * Created by Boris on 24.05.2016.
  */
 
-public class ObjectCreatorServlet extends HttpServlet {
+public class SimpleCreatorServlet extends HttpServlet {
 
     @Autowired
-    public ObjectAssemblyService assemblyService;
-
-    //@Autowired
-    //public JDBCWebDAO dao;
+    private ObjectAssemblyService assemblyService;
 
     @Autowired
-    public JDBCTestWebDAO dao1;
+    private JDBCSimpleObjectDAO dao;
 
 //    public static void main(String[] args) {
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/spring/context.xml");
-//        dao1 = (JDBCTestWebDAO) context.getBean("jdbcTestWebDAO");
-//        System.out.println(dao1.getProductionQuality(0.37));
-//        dao1.saveObject(new TestWebObject("cat", "awful", "stone"));
-//        for (String o : dao1.getListOfSources()){
+//        dao = (JDBCSimpleObjectDAO) context.getBean("jdbcTestWebDAO");
+//        System.out.println(dao.getProductionQuality(0.37));
+//        dao.saveObject(new SimpleObject("cat", "awful", "stone"));
+//        for (String o : dao.getListOfSources()){
 //            System.out.println(o);
 //        }
 //
@@ -51,12 +45,8 @@ public class ObjectCreatorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> components = null;
-        List<String> sources = null;
-        components = dao1.getListOfMaterials();
-        //components = dao.getComponents(); //dao1.getListOfSources();
-        sources = dao1.getListOfSources();
-        //sources = dao.getSources();       //dao1.getListOfSources();
+        List<String> components = dao.getListOfMaterials();
+        List<String> sources = dao.getListOfSources();
         req.setAttribute("components", components);
         req.setAttribute("sources", sources);
         req.getRequestDispatcher("/object-creator.jsp").forward(req, resp);
@@ -66,8 +56,7 @@ public class ObjectCreatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<String> components = new ArrayList<String>();
         List<String> sources = new ArrayList<String>();
-        TestWebObject createdSimpleObject = null;
-        //WebObject createdSimpleObject = null;
+        SimpleObject createdSimpleObject = null;
         String component;
         component = req.getParameter("component1");
         if (component!=null) {
@@ -88,8 +77,7 @@ public class ObjectCreatorServlet extends HttpServlet {
         if (components.size()>0) {
             try {
                 createdSimpleObject = assemblyService.assemblyOfObject(components, sources);
-                dao1.saveObject(createdSimpleObject);
-                //dao.addObject(createdSimpleObject);
+                dao.saveObject(createdSimpleObject);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
