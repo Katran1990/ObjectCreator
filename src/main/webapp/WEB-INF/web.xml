@@ -17,24 +17,4 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!--<servlet>-->
-        <!--<servlet-name>simpleCreatorServlet</servlet-name>-->
-        <!--<servlet-class>com.katran.app.servlet.SimpleCreatorServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>simpleCreatorServlet</servlet-name>-->
-        <!--<url-pattern>/simple-creator</url-pattern>-->
-    <!--</servlet-mapping>-->
-
-    <!--<servlet>-->
-        <!--<servlet-name>simpleViewerServlet</servlet-name>-->
-        <!--<servlet-class>com.katran.app.servlet.SimpleViewerServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>simpleViewerServlet</servlet-name>-->
-        <!--<url-pattern>/simple-viewer</url-pattern>-->
-    <!--</servlet-mapping>-->
-
 </web-app>
