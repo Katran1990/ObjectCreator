@@ -25,6 +25,7 @@
         <apache.dbcp2>2.1.1</apache.dbcp2>
         <spring.jdbc>4.2.5.RELEASE</spring.jdbc>
         <spring.test>2.5</spring.test>
+        <spring-tx>4.3.0.RELEASE</spring-tx>
     </properties>
 
     <dependencies>
@@ -83,6 +84,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.jdbc}</version>
+        </dependency>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring-tx}</version>
         </dependency>
     </dependencies>
 </project>

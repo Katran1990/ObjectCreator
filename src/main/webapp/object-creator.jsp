@@ -25,6 +25,7 @@
             color: #333;
             background-color: #d9edf7;
         }
+
         .starter-template {
             padding: 40px 15px;
             text-align: center;
@@ -35,11 +36,11 @@
             padding-top: 60px;
         }
 
-        form.form-inline .form-group{
+        form.form-inline .form-group {
             margin-bottom: 15px;
         }
 
-        .btn-primary.active{
+        .btn-primary.active {
             color: #fff;
             background-color: #222;
             border-color: #080808;
@@ -138,16 +139,18 @@
                 </form>
                 <br><br>
             </div>
-            <div class="container">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Created object is:</label>
-                        <div class="col-sm-10">
-                            <p class="form-control-static">${createdObject}</p>
+            <c:if test="${createdObject!=null}">
+                <div class="container">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Created object is:</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">${createdObject}</p>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
+            </c:if>
         </div>
     </div>
 </div>

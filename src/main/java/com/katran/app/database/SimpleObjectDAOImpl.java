@@ -1,16 +1,22 @@
 package com.katran.app.database;
 
 import com.katran.app.object.SimpleObject;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 
 /**
  * Created by Boris on 05.07.2016.
  */
-public class JDBCSimpleObjectDAO {
+// The project needs an interface JDBCDAO.
+
+public class SimpleObjectDAOImpl implements SimpleObjectDAO {
 
     @Autowired
     private JdbcTemplate template;
@@ -24,7 +30,7 @@ public class JDBCSimpleObjectDAO {
                 "AND als.quality=pq.id " +
                 "AND als.material=m.id",
                 new Object[]{index},
-                new SimpleObjectRowMapper());
+                new SimpleObjectMapper());
     }
 
     public List<SimpleObject> getListOfCompletedSubjects(){
@@ -33,8 +39,9 @@ public class JDBCSimpleObjectDAO {
         "FROM all_subjects als, subjects s, production_quality pq, materials m " +
         "WHERE als.object = s.id " +
         "AND als.quality=pq.id " +
-        "AND als.material=m.id",
-        new SimpleObjectRowMapper());
+        "AND als.material=m.id " +
+        "ORDER BY als.id",
+        new SimpleObjectMapper());
     }
 
     public List<String> getListOfSources(){
@@ -91,10 +98,19 @@ public class JDBCSimpleObjectDAO {
 
     public void saveObject(SimpleObject twObject){
         template.update(
-                "INSERT INTO all_subjects (object, quality, material) VALUES (?, ?, ?)",
-                this.getSubjectIDByName(twObject.getSubject()),
-                this.getQualityIDByName(twObject.getQuality()),
-                this.getMaterialIDByName(twObject.getMaterial()));
+            "INSERT INTO all_subjects (object, quality, material) VALUES (?, ?, ?)",
+            this.getSubjectIDByName(twObject.getSubject()),
+            this.getQualityIDByName(twObject.getQuality()),
+            this.getMaterialIDByName(twObject.getMaterial()));
     }
 
+    private class SimpleObjectMapper implements RowMapper<SimpleObject>{
+        public SimpleObject mapRow(ResultSet rs, int rowNum) throws SQLException {
+            return new SimpleObject(
+                    rs.getInt("als.id"),
+                    rs.getString("s.name"),
+                    rs.getString("pq.name"),
+                    rs.getString("m.name"));
+        }
+    }
 }

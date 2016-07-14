@@ -1,14 +1,18 @@
 package com.katran.app.servlet;
-import com.katran.app.database.JDBCSimpleObjectDAO;
+
 import com.katran.app.object.ObjectAssemblyService;
 import com.katran.app.object.SimpleObject;
+import com.katran.app.object.SimpleObjectManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -24,16 +28,17 @@ public class SimpleCreatorServlet extends HttpServlet {
     private ObjectAssemblyService assemblyService;
 
     @Autowired
-    private JDBCSimpleObjectDAO dao;
+    private SimpleObjectManager manager;
 
 //    public static void main(String[] args) {
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/spring/context.xml");
-//        dao = (JDBCSimpleObjectDAO) context.getBean("jdbcTestWebDAO");
-//        System.out.println(dao.getProductionQuality(0.37));
-//        dao.saveObject(new SimpleObject("cat", "awful", "stone"));
-//        for (String o : dao.getListOfSources()){
+//        manager = (SimpleObjectManager) context.getBean("simpleObjectManager");
+//        System.out.println(manager.getProductionQuality(0.37));
+//        manager.saveObject(new SimpleObject("cat", "awful", "stone"));
+//        for (String o : manager.getListOfSources()){
 //            System.out.println(o);
 //        }
+//        System.out.println(manager.getSourceQualityByName("awful"));
 //
 //    }
 
@@ -45,10 +50,23 @@ public class SimpleCreatorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> components = dao.getListOfMaterials();
-        List<String> sources = dao.getListOfSources();
+        List<String> components = manager.getListOfMaterials();
+        List<String> sources = manager.getListOfSources();
         req.setAttribute("components", components);
         req.setAttribute("sources", sources);
+
+        HttpSession session = req.getSession();
+        Object error = session.getAttribute("error");
+        if (error != null) {
+            req.setAttribute("error", error);
+            session.removeAttribute("error");
+        }
+
+        Object createdObject = session.getAttribute("createdObject");
+        if (createdObject != null) {
+            req.setAttribute("createdObject", createdObject);
+            session.removeAttribute("createdObject");
+        }
         req.getRequestDispatcher("/object-creator.jsp").forward(req, resp);
     }
 
@@ -73,19 +91,19 @@ public class SimpleCreatorServlet extends HttpServlet {
             components.add(component);
             sources.add(req.getParameter("source3"));
         }
-
+        HttpSession session = req.getSession();
         if (components.size()>0) {
             try {
                 createdSimpleObject = assemblyService.assemblyOfObject(components, sources);
-                dao.saveObject(createdSimpleObject);
+                manager.saveObject(createdSimpleObject);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            req.setAttribute("createdObject", createdSimpleObject.toString());
+            session.setAttribute("createdObject", createdSimpleObject.toString());
         } else {
-            req.setAttribute("error", "An input error! Please, select at least one component.");
+            session.setAttribute("error", "An input error! Please, select at least one component.");
         }
-        doGet(req, resp);
+        resp.sendRedirect("simple-creator");
     }
 
 }

@@ -53,15 +53,15 @@
 </nav>
 <div class="container">
     <div class="starter-template">
-        <table class="table table-hover" action="simpleViewer" method="get">
-            <thead style="display: table-header-group">
+        <table class="table" action="simpleViewer" method="get">
+            <thead>
             <tr>
                 <td>ID</td>
                 <td>Name of object</td>
             </tr>
             </thead>
-            <tbody style="display: table-row-group">
-            <c:forEach begin="0" step="1" var="object" items="${objects}">
+            <tbody>
+            <c:forEach begin="0" end="${objects.size()}" step="1" var="object" items="${objects}">
                 <tr>
                     <td>${object.id}</td>
                     <td>${object.quality} ${object.material} ${object.subject}</td>

@@ -1,8 +1,10 @@
 package com.katran.app.object;
 
-import com.katran.app.database.JDBCSimpleObjectDAO;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +14,17 @@ import java.util.List;
  */
 
 public class ObjectAssemblyService {
+
     @Autowired
-    private JDBCSimpleObjectDAO dao;
+    private SimpleObjectManager manager;
 
     //ready
     public SimpleObject assemblyOfObject(List<String> components, List<String> sources) throws SQLException {
         String component = defineTheComponent(components);
         double quality = defineTheQuality(sources);
-        String generalQuality = dao.getProductionQuality(quality);
-        String object = dao.getSubjectNameByIndex(getRandomValue(1, dao.getNumberOfRowsInTable("subjects")));
+        String generalQuality = manager.getProductionQuality(quality);
+        String object = manager.getSubjectNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("subjects")));
         return new SimpleObject(object, generalQuality, component);
-
     }
 
     //ready
@@ -34,7 +36,7 @@ public class ObjectAssemblyService {
         } else {
             component = components.get(0);
             if (component.equals("rnd")) {
-                component = dao.getMaterialNameByIndex(getRandomValue(1, dao.getNumberOfRowsInTable("materials")));
+                component = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
             }
         }
         return component;
@@ -46,12 +48,13 @@ public class ObjectAssemblyService {
         double qualityOfComponents = 0;
         for (int i = 0; i < sources.size(); i++) {
             if (sources.get(i).equals("rnd")) {
-                sources.set(i, dao.getSourceNameByIndex(getRandomValue(1, dao.getNumberOfRowsInTable("subsources"))));
+                sources.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("subsources"))));
             }
-            qualityOfComponents+= dao.getSourceQualityByName(sources.get(i));
+            qualityOfComponents+= manager.getSourceQualityByName(sources.get(i));
         }
         qualityOfComponents = qualityOfComponents / sources.size();
-        return (1 - fine) * qualityOfComponents;
+        double preparedQuality = new BigDecimal(qualityOfComponents).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        return (1 - fine) * preparedQuality;
     }
 
     //ready
@@ -67,7 +70,7 @@ public class ObjectAssemblyService {
         for (int i = 0; i < components.size(); i++) {
             String element = components.get(i);
             if (element.equals("rnd")) {
-                element = dao.getMaterialNameByIndex(getRandomValue(1, dao.getNumberOfRowsInTable("materials")));
+                element = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
             }
             preparedComponents.add(element);
         }

@@ -1,7 +1,8 @@
 package com.katran.app.servlet;
 
-import com.katran.app.database.JDBCSimpleObjectDAO;
 import com.katran.app.object.SimpleObject;
+import com.katran.app.object.SimpleObjectManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
@@ -18,7 +19,7 @@ import java.util.List;
 public class SimpleViewerServlet extends HttpServlet {
 
     @Autowired
-    private JDBCSimpleObjectDAO dao;
+    private SimpleObjectManager manager;
 
     @Override
     public void init() throws ServletException {
@@ -29,13 +30,8 @@ public class SimpleViewerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<SimpleObject> objects;
-        objects = dao.getListOfCompletedSubjects();
+        objects = manager.getListOfCompletedSubjects();
         req.setAttribute("objects", objects);
         req.getRequestDispatcher("/created-objects.jsp").forward(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
     }
 }
