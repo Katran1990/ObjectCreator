@@ -9,6 +9,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * Created by Boris on 24.05.2016.
  */
-
+@WebServlet("/creator/*")
 public class SimpleCreatorServlet extends HttpServlet {
 
     @Autowired
@@ -103,7 +104,7 @@ public class SimpleCreatorServlet extends HttpServlet {
         } else {
             session.setAttribute("error", "An input error! Please, select at least one component.");
         }
-        resp.sendRedirect("simple-creator");
+        resp.sendRedirect("creator");
     }
 
 }

@@ -45,15 +45,15 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">About</a></li>
-                <li><a href="simple-creator">Create object</a></li>
-                <li class="active"><a href="simple-viewer">Created objects</a></li>
+                <li><a href="creator">Create object</a></li>
+                <li class="active"><a href="viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="starter-template">
-        <table class="table" action="simpleViewer" method="get">
+        <table class="table" action="viewer" method="get">
             <thead>
             <tr>
                 <td>ID</td>
