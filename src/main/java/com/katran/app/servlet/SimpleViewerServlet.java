@@ -16,23 +16,23 @@ import java.util.List;
 /**
  * Created by Boris on 22.06.2016.
  */
-@WebServlet("/viewer/*")
-public class SimpleViewerServlet extends HttpServlet {
-
-    @Autowired
-    private SimpleObjectManager manager;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext (this);
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<SimpleObject> objects;
-        objects = manager.getListOfCompletedSubjects();
-        req.setAttribute("objects", objects);
-        req.getRequestDispatcher("/created-objects.jsp").forward(req, resp);
-    }
-}
+//@WebServlet("/iiiviewer/*")
+//public class SimpleViewerServlet extends HttpServlet {
+//
+//    @Autowired
+//    private SimpleObjectManager manager;
+//
+//    @Override
+//    public void init() throws ServletException {
+//        super.init();
+//        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext (this);
+//    }
+//
+//    @Override
+//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        List<SimpleObject> objects;
+//        objects = manager.getListOfCompletedSubjects();
+//        req.setAttribute("objects", objects);
+//        req.getRequestDispatcher("/iiicreated-objects.jsp").forward(req, resp);
+//    }
+//}

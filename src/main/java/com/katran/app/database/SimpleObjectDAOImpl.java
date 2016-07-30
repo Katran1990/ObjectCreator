@@ -14,7 +14,6 @@ import java.util.List;
 /**
  * Created by Boris on 05.07.2016.
  */
-// The project needs an interface JDBCDAO.
 
 public class SimpleObjectDAOImpl implements SimpleObjectDAO {
 
@@ -52,7 +51,7 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
         return template.queryForList("SELECT name FROM materials", String.class);
     }
 
-    public int getNumberOfRowsInTable(String table){
+    public Integer getNumberOfRowsInTable(String table){
         return template.queryForObject("SELECT COUNT(*) FROM "+ table, Integer.class);
     }
 

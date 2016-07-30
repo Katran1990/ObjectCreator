@@ -18,7 +18,6 @@ public class ObjectAssemblyService {
     @Autowired
     private SimpleObjectManager manager;
 
-    //ready
     public SimpleObject assemblyOfObject(List<String> components, List<String> sources) throws SQLException {
         String component = defineTheComponent(components);
         double quality = defineTheQuality(sources);
@@ -27,10 +26,8 @@ public class ObjectAssemblyService {
         return new SimpleObject(object, generalQuality, component);
     }
 
-    //ready
     private String defineTheComponent(List<String> components) throws SQLException {
         String component;
-
         if (components.size() > 1) {
             component = getComponentFromList(components);
         } else {
@@ -42,7 +39,6 @@ public class ObjectAssemblyService {
         return component;
     }
 
-    //ready
     private double defineTheQuality(List<String> sources) throws SQLException {
         double fine = (3 - sources.size()) * 0.25;
         double qualityOfComponents = 0;
@@ -53,18 +49,15 @@ public class ObjectAssemblyService {
             qualityOfComponents+= manager.getSourceQualityByName(sources.get(i));
         }
         qualityOfComponents = qualityOfComponents / sources.size();
-        double preparedQuality = new BigDecimal(qualityOfComponents).setScale(2, RoundingMode.HALF_UP).doubleValue();
-        return (1 - fine) * preparedQuality;
+        double preparedQuality = (1 - fine) * qualityOfComponents;
+        return new BigDecimal(preparedQuality).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
-    //ready
     private int getRandomValue(int beginRange, int endRange) {
         return (beginRange + (int) (Math.random() * ((endRange - beginRange) + 1)));
     }
 
-    //ready
     private String getComponentFromList(List<String> components) throws SQLException {
-
         List<String> preparedComponents = new ArrayList<String>();
 
         for (int i = 0; i < components.size(); i++) {
@@ -95,6 +88,4 @@ public class ObjectAssemblyService {
         }
         return component;
     }
-
-
 }

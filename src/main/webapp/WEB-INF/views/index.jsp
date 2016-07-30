@@ -1,12 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: Boris
-  Date: 22.06.2016
-  Time: 17:22
+  Date: 24.05.2016
+  Time: 19:17
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss"/>
+    <link href="${bootstrapCss}" rel="stylesheet" type="text/css">
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,11 +30,10 @@
         }
 
         .starter-template {
-            padding: 70px 15px;
+            padding: 40px 15px;
             text-align: center;
             top: 0;
         }
-
 
 
     </style>
@@ -40,37 +42,25 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Object creator</a>
+            <a class="navbar-brand" href="https://github.com/Katran1990/ObjectCreator">Object creator</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.jsp">About</a></li>
-                <li><a href="creator">Create object</a></li>
-                <li class="active"><a href="viewer">Created objects</a></li>
+                <li class="active"><a href="<c:url value="/"/>">About</a></li>
+                <li><a href="<c:url value="/creator"/>">Create object</a></li>
+                <li><a href="viewer">Created objects</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="starter-template">
-        <table class="table" action="viewer" method="get">
-            <thead>
-            <tr>
-                <td>ID</td>
-                <td>Name of object</td>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach begin="0" end="${objects.size()}" step="1" var="object" items="${objects}">
-                <tr>
-                    <td>${object.id}</td>
-                    <td>${object.quality} ${object.material} ${object.subject}</td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+        <h1>Object creator</h1>
+        <p class="lead">Use this program as a way to quickly create any new object.<br> On the page "Create object" you can create some objects with chosen components and quality.
+        <br> On the page "Created objects" you can see objects that has been created.</p>
     </div>
 </div>
-<script src="js/bootstrap.min.js"></script>
+<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs"/>
+<script src="${bootstrapJs}"/>
 </body>
 </html>

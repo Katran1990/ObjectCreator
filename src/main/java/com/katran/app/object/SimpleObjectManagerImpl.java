@@ -32,7 +32,7 @@ public class SimpleObjectManagerImpl implements SimpleObjectManager {
         return dao.getListOfMaterials();
     }
 
-    public int getNumberOfRowsInTable(String table) {
+    public Integer getNumberOfRowsInTable(String table) {
         return dao.getNumberOfRowsInTable(table);
     }
 
