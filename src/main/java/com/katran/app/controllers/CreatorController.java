@@ -99,7 +99,7 @@ public class CreatorController {
         return "redirect:/creator";
     }
 
-    @RequestMapping
+    @RequestMapping(value="/viewer", method = RequestMethod.GET)
     public ModelAndView viewCreatorObjects(){
         ModelAndView model = new ModelAndView("created-objects");
         List<SimpleObject> objects;
