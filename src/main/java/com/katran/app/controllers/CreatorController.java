@@ -1,8 +1,8 @@
 package com.katran.app.controllers;
 
-import com.katran.app.object.ObjectAssemblyService;
+import com.katran.app.object.AssemblyService;
 import com.katran.app.object.SimpleObject;
-import com.katran.app.object.SimpleObjectManager;
+import com.katran.app.object.Manager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,17 +17,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Boris on 16.07.2016.
- */
+
 @Controller
 public class CreatorController {
 
     @Autowired
-    private ObjectAssemblyService assemblyService;
+    private AssemblyService assemblyService;
 
     @Autowired
-    private SimpleObjectManager manager;
+    private Manager manager;
 
     @GetMapping(value = "/")
     public String welcome(){
@@ -97,7 +95,7 @@ public class CreatorController {
 
     @GetMapping(value="/viewer")
     public ModelAndView viewCreatorObjects(){
-        ModelAndView model = new ModelAndView("created-objects");
+        ModelAndView model = new ModelAndView("viewer");
         List<SimpleObject> objects;
         objects = manager.getListOfCompletedSubjects();
         model.addObject("objects", objects);

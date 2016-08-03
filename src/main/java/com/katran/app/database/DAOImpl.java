@@ -1,7 +1,6 @@
 package com.katran.app.database;
 
 import com.katran.app.object.SimpleObject;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -10,12 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-
-/**
- * Created by Boris on 05.07.2016.
- */
-
-public class SimpleObjectDAOImpl implements SimpleObjectDAO {
+public class DAOImpl implements DAO {
 
     @Autowired
     private JdbcTemplate template;

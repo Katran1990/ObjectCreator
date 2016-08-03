@@ -2,9 +2,6 @@ package com.katran.app.object;
 
 import org.apache.log4j.Logger;
 
-/**
- * Created by Boris on 02.07.2016.
- */
 public class SimpleObject {
 
     private int id;

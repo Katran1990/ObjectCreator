@@ -1,20 +1,15 @@
 package com.katran.app.object;
 
-import com.katran.app.database.SimpleObjectDAO;
-import org.apache.log4j.Logger;
+import com.katran.app.database.DAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by Boris on 13.07.2016.
- */
-public class SimpleObjectManagerImpl implements SimpleObjectManager {
+public class ManagerImpl implements Manager {
 
     @Autowired
-    private SimpleObjectDAO dao;
+    private DAO dao;
 
     public SimpleObject getCompletedSubjectByIndex(int index) {
         return dao.getCompletedSubjectByIndex(index);

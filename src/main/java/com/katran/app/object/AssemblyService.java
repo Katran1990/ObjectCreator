@@ -1,6 +1,5 @@
 package com.katran.app.object;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
@@ -9,14 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Boris on 25.05.2016.
- */
-
-public class ObjectAssemblyService {
+public class AssemblyService {
 
     @Autowired
-    private SimpleObjectManager manager;
+    private Manager manager;
 
     public SimpleObject assemblyOfObject(List<String> components, List<String> sources) throws SQLException {
         String component = defineTheComponent(components);

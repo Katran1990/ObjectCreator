@@ -5,10 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by Boris on 13.07.2016.
- */
-public interface SimpleObjectDAO {
+public interface DAO {
     SimpleObject getCompletedSubjectByIndex(int index);
 
     List<SimpleObject> getListOfCompletedSubjects();

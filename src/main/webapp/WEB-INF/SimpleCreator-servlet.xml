@@ -18,11 +18,11 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean id="assemblyService" class="com.katran.app.object.ObjectAssemblyService"/>
+    <bean id="assemblyService" class="com.katran.app.object.AssemblyService"/>
 
-    <bean id="objectDAO" class="com.katran.app.database.SimpleObjectDAOImpl"/>
+    <bean id="objectDAO" class="com.katran.app.database.DAOImpl"/>
 
-    <bean id="objectManager" class="com.katran.app.object.SimpleObjectManagerImpl"/>
+    <bean id="objectManager" class="com.katran.app.object.ManagerImpl"/>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg name="dataSource" ref="dataSource"/>
