@@ -22,10 +22,10 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
 
     public SimpleObject getCompletedSubjectByIndex(int index){
         return template.queryForObject(
-                "SELECT als.id, s.name, pq.name, m.name " +
-                "FROM all_subjects als, subjects s, production_quality pq, materials m " +
+                "SELECT als.id, o.name, pq.name, m.name " +
+                "FROM object_list als, objects o, production_quality pq, materials m " +
                 "WHERE als.id = ? " +
-                "AND als.object = s.id " +
+                "AND als.object = o.id " +
                 "AND als.quality=pq.id " +
                 "AND als.material=m.id",
                 new Object[]{index},
@@ -34,9 +34,9 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
 
     public List<SimpleObject> getListOfCompletedSubjects(){
         return template.query(
-        "SELECT als.id, s.name, pq.name, m.name " +
-        "FROM all_subjects als, subjects s, production_quality pq, materials m " +
-        "WHERE als.object = s.id " +
+        "SELECT als.id, o.name, pq.name, m.name " +
+        "FROM object_list als, objects o, production_quality pq, materials m " +
+        "WHERE als.object = o.id " +
         "AND als.quality=pq.id " +
         "AND als.material=m.id " +
         "ORDER BY als.id",
@@ -44,7 +44,7 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
     }
 
     public List<String> getListOfSources(){
-        return template.queryForList("SELECT name FROM subsources", String.class);
+        return template.queryForList("SELECT name FROM sources", String.class);
     }
 
     public List<String> getListOfMaterials(){
@@ -64,11 +64,11 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
     }
 
     public String getSubjectNameByIndex(int index){
-        return template.queryForObject("SELECT name FROM subjects WHERE id = ?", new Object[]{index} ,String.class);
+        return template.queryForObject("SELECT name FROM objects WHERE id = ?", new Object[]{index} ,String.class);
     }
 
     public Integer getSubjectIDByName(String name){
-        return template.queryForObject("SELECT id FROM subjects WHERE name = ?", new Object[]{name} ,Integer.class);
+        return template.queryForObject("SELECT id FROM objects WHERE name = ?", new Object[]{name} ,Integer.class);
     }
 
     public String getQualityNameByIndex(int index){
@@ -80,15 +80,15 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
     }
 
     public String getSourceNameByIndex(int index){
-        return template.queryForObject("SELECT name FROM subsources WHERE id = ?", new Object[]{index} ,String.class);
+        return template.queryForObject("SELECT name FROM sources WHERE id = ?", new Object[]{index} ,String.class);
     }
 
     public Integer getSourceIDByName(String name){
-        return template.queryForObject("SELECT id FROM subsources WHERE name = ?", new Object[]{name} ,Integer.class);
+        return template.queryForObject("SELECT id FROM sources WHERE name = ?", new Object[]{name} ,Integer.class);
     }
 
     public Double getSourceQualityByName(String name){
-        return template.queryForObject("SELECT quality FROM subsources WHERE name = ?", new Object[]{name} ,Double.class);
+        return template.queryForObject("SELECT quality FROM sources WHERE name = ?", new Object[]{name} ,Double.class);
     }
 
     public String getProductionQuality(double value) {
@@ -97,7 +97,7 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
 
     public void saveObject(SimpleObject twObject){
         template.update(
-            "INSERT INTO all_subjects (object, quality, material) VALUES (?, ?, ?)",
+            "INSERT INTO object_list (object, quality, material) VALUES (?, ?, ?)",
             this.getSubjectIDByName(twObject.getSubject()),
             this.getQualityIDByName(twObject.getQuality()),
             this.getMaterialIDByName(twObject.getMaterial()));
@@ -107,7 +107,7 @@ public class SimpleObjectDAOImpl implements SimpleObjectDAO {
         public SimpleObject mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new SimpleObject(
                     rs.getInt("als.id"),
-                    rs.getString("s.name"),
+                    rs.getString("o.name"),
                     rs.getString("pq.name"),
                     rs.getString("m.name"));
         }

@@ -22,7 +22,7 @@ public class ObjectAssemblyService {
         String component = defineTheComponent(components);
         double quality = defineTheQuality(sources);
         String generalQuality = manager.getProductionQuality(quality);
-        String object = manager.getSubjectNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("subjects")));
+        String object = manager.getSubjectNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("objects")));
         return new SimpleObject(object, generalQuality, component);
     }
 
@@ -44,7 +44,7 @@ public class ObjectAssemblyService {
         double qualityOfComponents = 0;
         for (int i = 0; i < sources.size(); i++) {
             if (sources.get(i).equals("rnd")) {
-                sources.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("subsources"))));
+                sources.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("sources"))));
             }
             qualityOfComponents+= manager.getSourceQualityByName(sources.get(i));
         }
