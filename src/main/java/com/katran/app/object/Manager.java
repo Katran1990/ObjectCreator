@@ -1,5 +1,7 @@
 package com.katran.app.object;
 
+import com.katran.app.database.clazzes.Material;
+
 import java.util.List;
 
 public interface Manager {
@@ -34,4 +36,8 @@ public interface Manager {
     String getProductionQuality(double value);
 
     void saveObject(SimpleObject twObject);
+
+    List<Material> getAllMaterials();
+
+    public void addMaterial(String material);
 }

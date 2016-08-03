@@ -40,6 +40,7 @@
         <spring-aop>4.3.0.RELEASE</spring-aop>
         <webjars-bootstrap>3.3.6</webjars-bootstrap>
         <webjars-jquery>3.0.0</webjars-jquery>
+        <google-gson>2.7</google-gson>
     </properties>
 
     <dependencies>
@@ -123,6 +124,11 @@
         <groupId>org.webjars</groupId>
         <artifactId>jquery</artifactId>
         <version>${webjars-jquery}</version>
+        </dependency>
+        <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>${google-gson}</version>
         </dependency>
     </dependencies>
 </project>

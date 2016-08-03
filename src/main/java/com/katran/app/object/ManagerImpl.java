@@ -1,6 +1,7 @@
 package com.katran.app.object;
 
 import com.katran.app.database.DAO;
+import com.katran.app.database.clazzes.Material;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -74,5 +75,13 @@ public class ManagerImpl implements Manager {
     @Transactional
     public void saveObject(SimpleObject twObject) {
         dao.saveObject(twObject);
+    }
+
+    public List<Material> getAllMaterials(){
+        return dao.getAllMaterials();
+    }
+
+    public void addMaterial(String material){
+        dao.addMaterial(material);
     }
 }

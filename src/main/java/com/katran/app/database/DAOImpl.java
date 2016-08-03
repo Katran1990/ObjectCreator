@@ -1,5 +1,6 @@
 package com.katran.app.database;
 
+import com.katran.app.database.clazzes.Material;
 import com.katran.app.object.SimpleObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -105,5 +106,21 @@ public class DAOImpl implements DAO {
                     rs.getString("pq.name"),
                     rs.getString("m.name"));
         }
+    }
+
+    private class MaterialMapper implements RowMapper<Material>{
+        public Material mapRow(ResultSet rs, int rowNum) throws SQLException {
+            return new Material(
+                    rs.getInt("materials.id"),
+                    rs.getString("materials.name"));
+        }
+    }
+
+    public List<Material> getAllMaterials(){
+        return template.query("SELECT id, name FROM materials ORDER BY id", new MaterialMapper());
+    }
+
+    public void addMaterial(String material){
+        template.update("INSERT INTO materials (name) VALUES (?)", material);
     }
 }

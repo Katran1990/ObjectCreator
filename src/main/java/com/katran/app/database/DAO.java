@@ -1,5 +1,6 @@
 package com.katran.app.database;
 
+import com.katran.app.database.clazzes.Material;
 import com.katran.app.object.SimpleObject;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,4 +38,8 @@ public interface DAO {
     String getProductionQuality(double value);
 
     void saveObject(SimpleObject twObject);
+
+    List<Material> getAllMaterials();
+
+    void addMaterial(String material);
 }
