@@ -15,6 +15,7 @@ import java.util.List;
  */
 
 @RestController
+@RequestMapping(value = "/materials")
 public class RestCreatorController {
 
     @Autowired
@@ -23,16 +24,34 @@ public class RestCreatorController {
     @Autowired
     private Manager manager;
 
-    @GetMapping(value = "/materials")
+    @GetMapping(value = "/get")
     public String allMaterials(){
         return new Gson().toJson(manager.getAllMaterials());
     }
 
-    @PostMapping(value = "/{materialName}")
+    @PostMapping(value = "/add/{materialName}")
     public HttpStatus addMaterial(@PathVariable String materialName){
         manager.addMaterial(materialName);
         return HttpStatus.OK;
     }
 
+    @GetMapping(value = "/getbyid/{id}")
+    public String getMaterialById(@PathVariable Integer id){
+        return new Gson().toJson(manager.getMaterial(id));
+    }
 
+    @GetMapping(value = "/getbyname/{materialName}")
+    public String getMaterialByName(@PathVariable String materialName){
+        return new Gson().toJson(manager.getMaterial(materialName));
+    }
+
+    @DeleteMapping(value = "/deletebyid/{id}")
+    public String deleteMaterialById(@PathVariable Integer id){
+        return new Gson().toJson(manager.deleteMaterial(id));
+    }
+
+    @DeleteMapping(value = "/deletebyname/{materialName}")
+    public String deleteMaterialByName(@PathVariable String materialName){
+        return new Gson().toJson(manager.deleteMaterial(materialName));
+    }
 }

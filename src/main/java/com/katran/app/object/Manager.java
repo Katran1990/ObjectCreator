@@ -39,5 +39,13 @@ public interface Manager {
 
     List<Material> getAllMaterials();
 
-    public void addMaterial(String material);
+    Material getMaterial(Integer id);
+
+    Material getMaterial(String name);
+
+    void addMaterial(String material);
+
+    Material deleteMaterial(Integer id);
+
+    Material deleteMaterial(String name);
 }

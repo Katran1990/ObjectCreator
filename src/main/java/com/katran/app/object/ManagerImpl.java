@@ -81,7 +81,23 @@ public class ManagerImpl implements Manager {
         return dao.getAllMaterials();
     }
 
+    public Material getMaterial(Integer id){
+        return dao.getMaterial(id);
+    }
+
+    public Material getMaterial(String name){
+        return dao.getMaterial(name);
+    }
+
     public void addMaterial(String material){
         dao.addMaterial(material);
+    }
+
+    public Material deleteMaterial(Integer id){
+        return dao.deleteMaterial(id);
+    }
+
+    public Material deleteMaterial(String name){
+        return dao.deleteMaterial(name);
     }
 }

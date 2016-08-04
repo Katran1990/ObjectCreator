@@ -120,7 +120,27 @@ public class DAOImpl implements DAO {
         return template.query("SELECT id, name FROM materials ORDER BY id", new MaterialMapper());
     }
 
+    public Material getMaterial(Integer id){
+        return template.queryForObject("SELECT id, name FROM materials WHERE id = (?)", new MaterialMapper(), id);
+    }
+
+    public Material getMaterial(String name){
+        return template.queryForObject("SELECT id, name FROM materials WHERE name = (?)", new MaterialMapper(), name);
+    }
+
     public void addMaterial(String material){
         template.update("INSERT INTO materials (name) VALUES (?)", material);
+    }
+
+    public Material deleteMaterial(Integer id) {
+        Material material = getMaterial(id);
+        template.update("DELETE FROM materials WHERE id = (?)", id);
+        return material;
+    }
+
+    public Material deleteMaterial(String name) {
+        Material material = getMaterial(name);
+        template.update("DELETE FROM materials WHERE name = (?)", name);
+        return material;
     }
 }

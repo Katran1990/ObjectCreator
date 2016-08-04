@@ -41,5 +41,13 @@ public interface DAO {
 
     List<Material> getAllMaterials();
 
+    Material getMaterial(Integer id);
+
+    Material getMaterial(String name);
+
     void addMaterial(String material);
+
+    Material deleteMaterial(Integer id);
+
+    Material deleteMaterial(String name);
 }
