@@ -40,7 +40,7 @@ public class WeatherService {
         client.close();
         result.put("city", jsonObject.get("name").getAsString());
         result.put("temp", jsonObject.get("main").getAsJsonObject().get("temp").getAsString());
-        result.put("speed", jsonObject.get("wind").getAsJsonObject().get("speed").getAsDouble());
+        result.put("wind", jsonObject.get("wind").getAsJsonObject().get("speed").getAsDouble());
         return result;
     }
 }
