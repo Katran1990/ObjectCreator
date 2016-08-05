@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -19,9 +20,6 @@ import java.util.List;
 public class RestCreatorController {
 
     @Autowired
-    private AssemblyService assemblyService;
-
-    @Autowired
     private Manager manager;
 
     @GetMapping(value = "/get")
@@ -29,29 +27,46 @@ public class RestCreatorController {
         return new Gson().toJson(manager.getAllMaterials());
     }
 
-    @PostMapping(value = "/add/{materialName}")
+    @GetMapping(value = "/get/id:{id}")
+    public String getMaterialById(@PathVariable Integer id){
+        try {
+            return new Gson().toJson(manager.getMaterial(id));
+        } catch (Exception e){
+            return null;
+        }
+
+    }
+
+    @GetMapping(value = "/get/name:{materialName}")
+    public String getMaterialByName(@PathVariable String materialName){
+        try {
+            return new Gson().toJson(manager.getMaterial(materialName));
+        } catch (Exception e){
+            return null;
+        }
+    }
+
+    @PostMapping(value = "/post/name:{materialName}")
     public HttpStatus addMaterial(@PathVariable String materialName){
         manager.addMaterial(materialName);
         return HttpStatus.OK;
     }
 
-    @GetMapping(value = "/getbyid/{id}")
-    public String getMaterialById(@PathVariable Integer id){
-        return new Gson().toJson(manager.getMaterial(id));
-    }
-
-    @GetMapping(value = "/getbyname/{materialName}")
-    public String getMaterialByName(@PathVariable String materialName){
-        return new Gson().toJson(manager.getMaterial(materialName));
-    }
-
-    @DeleteMapping(value = "/deletebyid/{id}")
+    @DeleteMapping(value = "/delete/id:{id}")
     public String deleteMaterialById(@PathVariable Integer id){
-        return new Gson().toJson(manager.deleteMaterial(id));
+        try {
+            return new Gson().toJson(manager.deleteMaterial(id));
+        } catch (Exception e){
+            return null;
+        }
     }
 
-    @DeleteMapping(value = "/deletebyname/{materialName}")
+    @DeleteMapping(value = "/delete/name:{materialName}")
     public String deleteMaterialByName(@PathVariable String materialName){
-        return new Gson().toJson(manager.deleteMaterial(materialName));
+        try {
+            return new Gson().toJson(manager.deleteMaterial(materialName));
+        } catch (Exception e){
+            return null;
+        }
     }
 }

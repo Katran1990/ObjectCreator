@@ -48,4 +48,6 @@ public interface Manager {
     Material deleteMaterial(Integer id);
 
     Material deleteMaterial(String name);
+
+    void updateMaterial(Integer id, String name);
 }

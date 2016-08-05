@@ -143,4 +143,8 @@ public class DAOImpl implements DAO {
         template.update("DELETE FROM materials WHERE name = (?)", name);
         return material;
     }
+
+    public void updateMaterial(Integer id, String name) {
+        template.update("UPDATE materials SET name = (?) WHERE id = (?)", name, id);
+    }
 }

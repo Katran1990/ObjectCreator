@@ -100,4 +100,8 @@ public class ManagerImpl implements Manager {
     public Material deleteMaterial(String name){
         return dao.deleteMaterial(name);
     }
+
+    public void updateMaterial(Integer id, String name) {
+        dao.updateMaterial(id, name);
+    }
 }

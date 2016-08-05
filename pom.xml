@@ -41,6 +41,7 @@
         <webjars-bootstrap>3.3.6</webjars-bootstrap>
         <webjars-jquery>3.0.0</webjars-jquery>
         <google-gson>2.7</google-gson>
+        <apache-httpclient>4.5.2</apache-httpclient>
     </properties>
 
     <dependencies>
@@ -129,6 +130,11 @@
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
         <version>${google-gson}</version>
+        </dependency>
+        <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>${apache-httpclient}</version>
         </dependency>
     </dependencies>
 </project>

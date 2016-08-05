@@ -47,8 +47,11 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<c:url value="/"/>">About</a></li>
-                <li><a href="<c:url value="/creator"/>">Create object</a></li>
+                <li><a href="creator">Create object</a></li>
                 <li><a href="viewer">Created objects</a></li>
+                <li><a href="">City: ${city}</a></li>
+                <li><a href="">Temperature: ${temp} C</a></li>
+                <li><a href="">Wind: ${wind} km/h</a></li>
             </ul>
         </div>
     </div>

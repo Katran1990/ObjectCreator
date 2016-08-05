@@ -60,7 +60,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<c:url value="/"/>">About</a></li>
-                <li class="active"><a href="<c:url value="/creator"/>">Create object</a></li>
+                <li class="active"><a href="creator">Create object</a></li>
                 <li><a href="viewer">Created objects</a></li>
             </ul>
         </div>

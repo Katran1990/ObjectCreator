@@ -20,6 +20,8 @@
 
     <bean id="assemblyService" class="com.katran.app.object.AssemblyService"/>
 
+    <bean id="weatherService" class="com.katran.app.object.WeatherService"/>
+
     <bean id="objectDAO" class="com.katran.app.database.DAOImpl"/>
 
     <bean id="objectManager" class="com.katran.app.object.ManagerImpl"/>
