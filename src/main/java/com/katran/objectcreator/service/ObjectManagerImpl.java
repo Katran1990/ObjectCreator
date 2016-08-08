@@ -1,22 +1,25 @@
-package com.katran.app.object;
+package com.katran.objectcreator.service;
 
-import com.katran.app.database.DAO;
-import com.katran.app.database.clazzes.Material;
+import com.katran.objectcreator.database.ObjectDAO;
+import com.katran.objectcreator.model.Material;
+import com.katran.objectcreator.model.SimpleObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public class ManagerImpl implements Manager {
+@Service(value = "objectManager")
+public class ObjectManagerImpl implements ObjectManager {
 
     @Autowired
-    private DAO dao;
+    private ObjectDAO dao;
 
-    public SimpleObject getCompletedSubjectByIndex(int index) {
+    public SimpleObject getCompletedObjectByIndex(int index) {
         return dao.getCompletedSubjectByIndex(index);
     }
 
-    public List<SimpleObject> getListOfCompletedSubjects() {
+    public List<SimpleObject> getListOfCompletedObjects() {
         return dao.getListOfCompletedSubjects();
     }
 
@@ -77,27 +80,27 @@ public class ManagerImpl implements Manager {
         dao.saveObject(twObject);
     }
 
-    public List<Material> getAllMaterials(){
+    public List<Material> getAllMaterials() {
         return dao.getAllMaterials();
     }
 
-    public Material getMaterial(Integer id){
+    public Material getMaterial(Integer id) {
         return dao.getMaterial(id);
     }
 
-    public Material getMaterial(String name){
+    public Material getMaterial(String name) {
         return dao.getMaterial(name);
     }
 
-    public void addMaterial(String material){
+    public void addMaterial(String material) {
         dao.addMaterial(material);
     }
 
-    public Material deleteMaterial(Integer id){
+    public Material deleteMaterial(Integer id) {
         return dao.deleteMaterial(id);
     }
 
-    public Material deleteMaterial(String name){
+    public Material deleteMaterial(String name) {
         return dao.deleteMaterial(name);
     }
 

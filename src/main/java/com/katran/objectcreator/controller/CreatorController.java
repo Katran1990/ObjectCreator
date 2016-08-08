@@ -1,32 +1,22 @@
-package com.katran.app.controllers;
+package com.katran.objectcreator.controller;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.katran.app.object.AssemblyService;
-import com.katran.app.object.Manager;
-import com.katran.app.object.SimpleObject;
-import com.katran.app.object.WeatherService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.message.BufferedHeader;
+import com.katran.objectcreator.model.ObjectComponent;
+import com.katran.objectcreator.model.ObjectComponentWrapper;
+import com.katran.objectcreator.service.AssemblyService;
+import com.katran.objectcreator.service.ObjectManager;
+import com.katran.objectcreator.model.SimpleObject;
+import com.katran.objectcreator.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +30,12 @@ public class CreatorController {
     private AssemblyService assemblyService;
 
     @Autowired
-    private Manager manager;
+    private ObjectManager manager;
 
     @Autowired
     private WeatherService weatherService;
+
+    private static final int NUMBER_OF_OBJECTS = 3;
 
     @GetMapping(value = "/")
     public ModelAndView welcome() throws Exception {
@@ -55,15 +47,19 @@ public class CreatorController {
         return model;
     }
 
-
     @GetMapping(value = "/creator")
     public ModelAndView getCreatorForm(HttpServletRequest request) throws IOException {
         ModelAndView model = new ModelAndView("creator");
-        List<String> components = manager.getListOfMaterials();
-        List<String> sources = manager.getListOfSources();
-        model.addObject("components", components);
-        model.addObject("sources", sources);
-
+        List<String> materialList = manager.getListOfMaterials();
+        List<String> qualityList = manager.getListOfSources();
+        model.addObject("materials", materialList);
+        model.addObject("qualities", qualityList);
+        ArrayList<ObjectComponent> componentList = new ArrayList<ObjectComponent>();
+        for (int i = 0; i< NUMBER_OF_OBJECTS; i++){
+            componentList.add(i, new ObjectComponent());
+        }
+        ObjectComponentWrapper componentWrapper = new ObjectComponentWrapper(componentList);
+        model.addObject("componentWrapper", componentWrapper);
 
         HttpSession session = request.getSession();
         Object error = session.getAttribute("error");
@@ -80,38 +76,29 @@ public class CreatorController {
         return model;
     }
 
-    //
+
     @PostMapping(value = "/creator")
-    public String submitCreatorForm(@RequestParam Map<String, String> req, HttpServletRequest request) throws ServletException, IOException {
-        List<String> components = new ArrayList<String>();
-        List<String> sources = new ArrayList<String>();
-        SimpleObject createdSimpleObject = null;
-        String component;
-        component = req.get("component1");
-        if (component != null) {
-            components.add(component);
-            sources.add(req.get("source1"));
-        }
-        component = req.get("component2");
-        if (component != null) {
-            components.add(component);
-            sources.add(req.get("source2"));
-        }
-        component = req.get("component3");
-        if (component != null) {
-            components.add(component);
-            sources.add(req.get("source3"));
+    public String submitCreatorForm(@ModelAttribute("componentWrapper") ObjectComponentWrapper componentWrapper, HttpServletRequest request) throws ServletException, IOException {
+        List<String> materialList = new ArrayList<String>();
+        List<String> qualityList = new ArrayList<String>();
+        for (int i = 0; i<componentWrapper.getComponentList().size(); i++){
+            ObjectComponent objectComponent = componentWrapper.getComponentList().get(i);
+            if (objectComponent.getMaterial()!=null){
+                materialList.add(objectComponent.getMaterial());
+                qualityList.add(objectComponent.getQuality());
+            }
         }
 
         HttpSession session = request.getSession();
-        if (components.size() > 0) {
+        SimpleObject createdObject = null;
+        if (materialList.size() > 0) {
             try {
-                createdSimpleObject = assemblyService.assemblyOfObject(components, sources);
-                manager.saveObject(createdSimpleObject);
+                createdObject = assemblyService.assemblyOfObject(materialList, qualityList);
+                manager.saveObject(createdObject);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            session.setAttribute("createdObject", createdSimpleObject.toString());
+            session.setAttribute("createdObject", createdObject.toString());
         } else {
             session.setAttribute("error", "An input error! Please, select at least one component.");
         }
@@ -121,8 +108,7 @@ public class CreatorController {
     @GetMapping(value = "/viewer")
     public ModelAndView viewCreatorObjects() throws IOException {
         ModelAndView model = new ModelAndView("viewer");
-        List<SimpleObject> objects;
-        objects = manager.getListOfCompletedSubjects();
+        List<SimpleObject> objects = manager.getListOfCompletedObjects();
         model.addObject("objects", objects);
         return model;
     }

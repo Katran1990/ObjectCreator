@@ -1,10 +1,11 @@
-package com.katran.app.object;
+package com.katran.objectcreator.database;
 
-import com.katran.app.database.clazzes.Material;
+import com.katran.objectcreator.model.Material;
+import com.katran.objectcreator.model.SimpleObject;
 
 import java.util.List;
 
-public interface Manager {
+public interface ObjectDAO {
     SimpleObject getCompletedSubjectByIndex(int index);
 
     List<SimpleObject> getListOfCompletedSubjects();

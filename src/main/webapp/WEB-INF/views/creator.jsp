@@ -1,13 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Boris
-  Date: 24.05.2016
-  Time: 18:36
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +41,6 @@
             background-color: #222;
             border-color: #080808;
         }
-
-
     </style>
 </head>
 <body>
@@ -68,77 +60,39 @@
 </nav>
 <div class="container">
     <div class="starter-template">
-
         <div class="container">
             <div class="starter-template">
-
-                <form class="form-inline" action="creator" method="post">
+                <form:form class="form-inline" action="creator" method="post" modelAttribute="componentWrapper">
                     <div class="form-group has-error">
                         <label class="control-label">${error}</label>
                     </div>
                     <br>
-                    <div class="form-group">
-                        Type of component:
-                        <select class="form-control" name="component1">
-                            <option disabled selected value>-- select an option --</option>
-                            <option value="rnd">random value</option>
-                            <c:forEach var="component" items="${components}">
-                                <option>${component}</option>
-                            </c:forEach>
-                        </select>
-                        Source of component:
-                        <select class="form-control" name="source1">
-                            <option value="rnd">random value</option>
-                            <c:forEach var="source" items="${sources}">
-                                <option>${source}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="form-group">
-                        Type of component:
-                        <select class="form-control" name="component2">
-                            <option disabled selected value>-- select an option --</option>
-                            <option value="rnd">random value</option>
-                            <c:forEach var="component" items="${components}">
-                                <option>${component}</option>
-                            </c:forEach>
-                        </select>
-                        Source of component:
-                        <select class="form-control" name="source2">
-                            <option value="rnd">random value</option>
-                            <c:forEach var="source" items="${sources}">
-                                <option>${source}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="form-group">
-                        Type of component:
-                        <select class="form-control" name="component3">
-                            <option disabled selected value>-- select an option --</option>
-                            <option value="rnd">random value</option>
-                            <c:forEach var="component" items="${components}">
-                                <option>${component}</option>
-                            </c:forEach>
-                        </select>
-                        Source of component:
-                        <select class="form-control" name="source3">
-                            <option value="rnd">random value</option>
-                            <c:forEach var="source" items="${sources}">
-                                <option>${source}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <br>
-                    <br>
+                    <c:forEach items="${componentWrapper.componentList}" varStatus="status">
+                        <div class="form-group">
+                            Type of component:
+                            <form:select class="form-control" path="componentList[${status.index}].material">
+                                <option disabled selected value>-- select an option --</option>
+                                <option value="rnd">random value</option>
+                                <c:forEach var="material" items="${materials}">
+                                    <option>${material}</option>
+                                </c:forEach>
+                            </form:select>
+                            Source of component:
+                            <form:select class="form-control" path="componentList[${status.index}].quality">
+                                <option value="rnd">random value</option>
+                                <c:forEach var="quality" items="${qualities}">
+                                    <option>${quality}</option>
+                                </c:forEach>
+                            </form:select>
+                        </div>
+                        <br>
+                        <br>
+                    </c:forEach>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary active">Create</button>
                         <button type="reset" class="btn btn-default active">Clear</button>
                     </div>
-                </form>
+                </form:form>
                 <br><br>
             </div>
             <c:if test="${createdObject!=null}">
@@ -156,10 +110,6 @@
         </div>
     </div>
 </div>
-
-
-<%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--%>
 <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs"/>
 <script src="${bootstrapJs}"/>
 

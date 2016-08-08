@@ -1,8 +1,5 @@
-package com.katran.app.database.clazzes;
+package com.katran.objectcreator.model;
 
-/**
- * Created by Boris on 04.08.2016.
- */
 public class Material {
 
     private Integer id;
@@ -13,7 +10,7 @@ public class Material {
         this.name = name;
     }
 
-    public Material(){
+    public Material() {
 
     }
 

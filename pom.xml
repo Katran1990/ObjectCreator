@@ -5,17 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.katran</groupId>
-    <artifactId>com.katran.simple-creator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>object-creator</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
     <build>
-        <finalName>simple-creator</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1.1</version>
                 <configuration>
+                    <warName>object-creator</warName>
+                    <outputDirectory>C:\Program Files\Java\apache-tomcat-9.0.0.M8\webapps\</outputDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
@@ -117,24 +118,24 @@
             <version>${spring-aop}</version>
         </dependency>
         <dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>bootstrap</artifactId>
-        <version>${webjars-bootstrap}</version>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${webjars-bootstrap}</version>
         </dependency>
         <dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>jquery</artifactId>
-        <version>${webjars-jquery}</version>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${webjars-jquery}</version>
         </dependency>
         <dependency>
-        <groupId>com.google.code.gson</groupId>
-        <artifactId>gson</artifactId>
-        <version>${google-gson}</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google-gson}</version>
         </dependency>
         <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>${apache-httpclient}</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${apache-httpclient}</version>
         </dependency>
     </dependencies>
 </project>

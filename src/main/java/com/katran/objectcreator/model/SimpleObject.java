@@ -1,6 +1,4 @@
-package com.katran.app.object;
-
-import org.apache.log4j.Logger;
+package com.katran.objectcreator.model;
 
 public class SimpleObject {
 
@@ -27,7 +25,7 @@ public class SimpleObject {
 
     @Override
     public String toString() {
-        return quality + " " + material + " " + subject ;
+        return quality + " " + material + " " + subject;
     }
 
     public String getSubject() {

@@ -1,15 +1,14 @@
-package com.katran.app.database;
+package com.katran.objectcreator.service;
 
-import com.katran.app.database.clazzes.Material;
-import com.katran.app.object.SimpleObject;
-import org.springframework.transaction.annotation.Transactional;
+import com.katran.objectcreator.model.Material;
+import com.katran.objectcreator.model.SimpleObject;
 
 import java.util.List;
 
-public interface DAO {
-    SimpleObject getCompletedSubjectByIndex(int index);
+public interface ObjectManager {
+    SimpleObject getCompletedObjectByIndex(int index);
 
-    List<SimpleObject> getListOfCompletedSubjects();
+    List<SimpleObject> getListOfCompletedObjects();
 
     List<String> getListOfSources();
 
