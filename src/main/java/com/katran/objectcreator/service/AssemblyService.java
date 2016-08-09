@@ -28,12 +28,12 @@ public class AssemblyService {
         return new SimpleObject(resultObject, resultQuality, resultMaterial);
     }
 
-    private String defineTheMaterial(List<String> components) throws SQLException {
+    private String defineTheMaterial(List<String> materialList) throws SQLException {
         String component;
-        if (components.size() > 1) {
-            component = getMaterialFromList(components);
+        if (materialList.size() > 1) {
+            component = getMaterialFromList(materialList);
         } else {
-            component = components.get(0);
+            component = materialList.get(0);
             if (component.equals(RANDOM)) {
                 component = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
             }
@@ -41,16 +41,16 @@ public class AssemblyService {
         return component;
     }
 
-    private double defineTheQuality(List<String> sources) throws SQLException {
-        double fine = (MAX_NUMBER_OF_COMPONENTS - sources.size()) * FINE_MULTIPLIER;
+    private double defineTheQuality(List<String> qualityList) throws SQLException {
+        double fine = (MAX_NUMBER_OF_COMPONENTS - qualityList.size()) * FINE_MULTIPLIER;
         double qualityOfMaterials = 0;
-        for (int i = 0; i < sources.size(); i++) {
-            if (sources.get(i).equals(RANDOM)) {
-                sources.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("sources"))));
+        for (int i = 0; i < qualityList.size(); i++) {
+            if (qualityList.get(i).equals(RANDOM)) {
+                qualityList.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("sources"))));
             }
-            qualityOfMaterials += manager.getSourceQualityByName(sources.get(i));
+            qualityOfMaterials += manager.getSourceQualityByName(qualityList.get(i));
         }
-        qualityOfMaterials = qualityOfMaterials / sources.size();
+        qualityOfMaterials = qualityOfMaterials / qualityList.size();
         double preparedQuality = (1 - fine) * qualityOfMaterials;
         return new BigDecimal(preparedQuality).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }

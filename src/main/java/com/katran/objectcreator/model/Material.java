@@ -11,7 +11,6 @@ public class Material {
     }
 
     public Material() {
-
     }
 
     public Integer getId() {
