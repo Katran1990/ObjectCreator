@@ -1,6 +1,7 @@
 package com.katran.objectcreator.service;
 
-import org.junit.Assert;
+import com.katran.objectcreator.model.SimpleObject;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,12 +13,11 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.security.SignedObject;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Boris on 09.08.2016.
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:context/object-creator-common-context.xml")
 public class AssemblyServiceTest {
@@ -69,5 +69,17 @@ public class AssemblyServiceTest {
         method.setAccessible(true);
         String result = (String) method.invoke(assemblyService, materialList);
         assert ("wood".equals(result));
+    }
+
+    @Test
+    public void testAssemblyOfObject() throws SQLException {
+        List<String> materialList = new ArrayList<String>();
+        List<String> qualityList = new ArrayList<String>();
+        for (int i=0; i<3; i++){
+            materialList.add("wood");
+            qualityList.add("excellent");
+        }
+        SimpleObject result = assemblyService.assemblyOfObject(materialList, qualityList);
+        assert ("wood".equals(result.getMaterial())&&"excellent".equals(result.getQuality()));
     }
 }
