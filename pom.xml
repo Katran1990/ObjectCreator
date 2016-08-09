@@ -35,7 +35,7 @@
         <apache.log4j>1.2.17</apache.log4j>
         <apache.dbcp2>2.1.1</apache.dbcp2>
         <spring.jdbc>4.2.5.RELEASE</spring.jdbc>
-        <spring.test>2.5</spring.test>
+        <spring.test>4.3.2.RELEASE</spring.test>
         <spring-tx>4.3.0.RELEASE</spring-tx>
         <spring-mvc>4.3.0.RELEASE</spring-mvc>
         <spring-aop>4.3.0.RELEASE</spring-aop>
