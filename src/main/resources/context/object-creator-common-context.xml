@@ -24,6 +24,6 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <mvc:resources mapping="/resources/**" location="/resources/"/>
     <mvc:annotation-driven/>
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>

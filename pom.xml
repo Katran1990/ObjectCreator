@@ -16,7 +16,7 @@
                 <version>2.1.1</version>
                 <configuration>
                     <warName>object-creator</warName>
-                    <outputDirectory>C:\Program Files\Java\apache-tomcat-9.0.0.M8\webapps\</outputDirectory>
+                    <outputDirectory>${deployment-dir}\webapps\</outputDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
@@ -51,6 +51,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.test}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

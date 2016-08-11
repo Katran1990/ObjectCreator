@@ -28,14 +28,11 @@
             color: #333;
             background-color: #d9edf7;
         }
-
         .starter-template {
             padding: 40px 15px;
             text-align: center;
             top: 0;
         }
-
-
     </style>
 </head>
 <body>
@@ -60,7 +57,7 @@
     <div class="starter-template">
         <h1>Object creator</h1>
         <p class="lead">Use this program as a way to quickly create any new object.<br> On the page "Create object" you can create some objects with chosen components and quality.
-        <br> On the page "Created objects" you can see objects that has been created.</p>
+            <br> On the page "Created objects" you can see objects that has been created.</p>
     </div>
 </div>
 <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs"/>
