@@ -1,43 +1,38 @@
 package com.katran.objectcreator.controller;
 
 import com.google.gson.Gson;
+import com.katran.objectcreator.model.SimpleObject;
 import com.katran.objectcreator.service.ObjectManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
+import java.util.List;
+
 @RestController
-@RequestMapping(value = "/materials")
-public class RestCreatorController {
+@RequestMapping(value = "/objects")
+public class SimpleObjectController {
 
     @Autowired
     private ObjectManager manager;
 
-    @GetMapping(value = "/get")
-    public String allMaterials() {
-        return new Gson().toJson(manager.getAllMaterials());
+    @GetMapping(value = "/")
+    public List<SimpleObject> allObjects() {
+        return manager.getListOfCompletedObjects();
     }
 
-    @GetMapping(value = "/get/id:{id}")
-    public String getMaterialById(@PathVariable Integer id) {
-        try {
-            return new Gson().toJson(manager.getMaterial(id));
-        } catch (Exception e) {
-            return null;
-        }
-
+    @GetMapping(value = "/{id}")
+    public SimpleObject getMaterialById(@PathVariable Integer id) {
+       return manager.getCompletedObjectByIndex(id);
     }
 
-    @GetMapping(value = "/get/name:{materialName}")
-    public String getMaterialByName(@PathVariable String materialName) {
-        try {
-            return new Gson().toJson(manager.getMaterial(materialName));
-        } catch (Exception e) {
-            return null;
-        }
+    @GetMapping
+    public String getMaterialByName(@RequestParam(required = true) String name) {
+            return new Gson().toJson(manager.getMaterial(name));
     }
 
-    @PostMapping(value = "/post/name:{materialName}")
+    @PostMapping(value = "/")
     public HttpStatus addMaterial(@PathVariable String materialName) {
         manager.addMaterial(materialName);
         return HttpStatus.OK;

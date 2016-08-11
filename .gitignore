@@ -19,6 +19,7 @@ ObjectCreator.iml
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
+object-creator.iml
 
 # Gradle:
 .idea/gradle.xml
