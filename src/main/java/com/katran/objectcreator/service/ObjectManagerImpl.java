@@ -80,6 +80,21 @@ public class ObjectManagerImpl implements ObjectManager {
         dao.saveObject(twObject);
     }
 
+    @Transactional
+    public void updateObject(Integer id, SimpleObject twObject) {
+        dao.updateObject(id, twObject);
+    }
+
+    @Transactional
+    public void deleteObject(Integer id){
+        dao.deleteObject(id);
+    }
+
+    @Transactional
+    public void deleteAllObjects(){
+        dao.deleteAllObjects();
+    }
+
     public List<Material> getAllMaterials() {
         return dao.getAllMaterials();
     }

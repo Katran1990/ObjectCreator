@@ -5,11 +5,14 @@ import com.google.gson.JsonObject;
 import com.katran.objectcreator.model.Material;
 import com.katran.objectcreator.model.SimpleObject;
 import com.katran.objectcreator.service.ObjectManager;
+import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,54 +24,80 @@ public class SimpleObjectController {
     private ObjectManager manager;
 
     @GetMapping(value = "/")
-    public List<SimpleObject> allObjects() {
-        return manager.getListOfCompletedObjects();
+    public ResponseEntity<List<SimpleObject>> allObjects() {
+        return new ResponseEntity<List<SimpleObject>>(manager.getListOfCompletedObjects(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}")
-    public SimpleObject getMaterialById(@PathVariable Integer id) {
-        return manager.getCompletedObjectByIndex(id);
-    }
-
-    @GetMapping
-    public String getMaterialByName(@RequestParam(required = true) String name) {
-        return new Gson().toJson(manager.getMaterial(name));
-    }
-
-//    PostMapping
-//    public Material addMaterial(@RequestParam String name){
-//        manager.addMaterial(name);
-//        return
-//    }
-
-//    @PostMapping(value = "/")
-//    public Material addMaterial(@RequestParam(required = true) String materialName) {
-//        try {
-//            manager.addMaterial(materialName);
-//        } catch (DuplicateKeyException dke) {
-//            JsonObject json = new JsonObject();
-//            json.addProperty("name", dke.getClass().getSimpleName());
-//            json.addProperty("message", "duplicate entry");
-//            return json;
-//        }
-//        return manager.getMaterial(materialName);
-//    }
-
-    @DeleteMapping(value = "/delete/id:{id}")
-    public String deleteMaterialById(@PathVariable Integer id) {
-        try {
-            return new Gson().toJson(manager.deleteMaterial(id));
-        } catch (Exception e) {
-            return null;
+    public ResponseEntity<SimpleObject> getSimpleObject(@PathVariable Integer id) {
+        if (id<1||id>manager.getNumberOfRowsInTable("object_list")){
+            return new ResponseEntity<SimpleObject>(HttpStatus.NOT_FOUND);
         }
+        SimpleObject responseObject = null;
+        try {
+            responseObject = manager.getCompletedObjectByIndex(id);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<SimpleObject>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<SimpleObject>(responseObject, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/delete/name:{materialName}")
-    public String deleteMaterialByName(@PathVariable String materialName) {
+    @PostMapping(value = "/")
+    public ResponseEntity<SimpleObject> addSimpleObject(@RequestBody SimpleObject newObject){
         try {
-            return new Gson().toJson(manager.deleteMaterial(materialName));
-        } catch (Exception e) {
-            return null;
+            manager.saveObject(newObject);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<SimpleObject>(HttpStatus.BAD_REQUEST);
         }
+        return new ResponseEntity<SimpleObject>(manager.getCompletedObjectByIndex(manager.getNumberOfRowsInTable("object_list")), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/list/")
+    public ResponseEntity<List<SimpleObject>> addListObjects(@RequestBody List<SimpleObject> newObjects){
+        try {
+            for (int i=0; i<newObjects.size(); i++){
+                manager.saveObject(newObjects.get(i));
+                newObjects.set(i, manager.getCompletedObjectByIndex(manager.getNumberOfRowsInTable("object_list")));
+            }
+        } catch (RuntimeException e) {
+            return new ResponseEntity<List<SimpleObject>>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<List<SimpleObject>>(newObjects, HttpStatus.OK);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<SimpleObject> putSimpleObject(@PathVariable Integer id, @RequestBody SimpleObject newObject){
+        if(id<1||id>manager.getNumberOfRowsInTable("object_list")){
+            return new ResponseEntity<SimpleObject>(HttpStatus.NOT_FOUND);
+        }
+        try {
+            manager.updateObject(id, newObject);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<SimpleObject>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<SimpleObject>(manager.getCompletedObjectByIndex(id), HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/")
+    public ResponseEntity<SimpleObject> deleteAllObjects() {
+        try {
+            manager.deleteAllObjects();
+        } catch (RuntimeException e) {
+            return new ResponseEntity<SimpleObject>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<SimpleObject>(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<SimpleObject> deleteMaterialByName(@PathVariable Integer id) {
+        if(id<1||id>manager.getNumberOfRowsInTable("object_list")){
+            return new ResponseEntity<SimpleObject>(HttpStatus.NOT_FOUND);
+        }
+        try {
+            manager.deleteObject(id);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<SimpleObject>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<SimpleObject>(HttpStatus.NO_CONTENT);
     }
 }

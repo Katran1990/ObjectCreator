@@ -38,6 +38,12 @@ public interface ObjectDAO {
 
     void saveObject(SimpleObject twObject);
 
+    void updateObject(Integer id, SimpleObject twObject);
+
+    void deleteObject(Integer id);
+
+    void deleteAllObjects();
+
     List<Material> getAllMaterials();
 
     Material getMaterial(Integer id);

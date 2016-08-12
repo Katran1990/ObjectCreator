@@ -100,6 +100,24 @@ public class ObjectDAOImpl implements ObjectDAO {
                 this.getMaterialIDByName(twObject.getMaterial()));
     }
 
+    public void updateObject(Integer id, SimpleObject twObject) {
+        template.update(
+                "UPDATE object_list SET object = (?), quality = (?), material = (?) WHERE id = (?)",
+                this.getSubjectIDByName(twObject.getSubject()),
+                this.getQualityIDByName(twObject.getQuality()),
+                this.getMaterialIDByName(twObject.getMaterial()),
+                id);
+    }
+
+    public void deleteObject(Integer id) {
+        template.update("DELETE FROM object_list WHERE id = (?)", id);
+    }
+
+    public void deleteAllObjects(){
+        template.update("DELETE FROM object_list");
+        template.update("ALTER TABLE object_list AUTO_INCREMENT = 1");
+    }
+
     private class SimpleObjectMapper implements RowMapper<SimpleObject> {
         public SimpleObject mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new SimpleObject(
