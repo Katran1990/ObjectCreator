@@ -33,7 +33,7 @@ public class SimpleObjectController {
         if (id<1||id>manager.getNumberOfRowsInTable("object_list")){
             return new ResponseEntity<SimpleObject>(HttpStatus.NOT_FOUND);
         }
-        SimpleObject responseObject = null;
+        SimpleObject responseObject;
         try {
             responseObject = manager.getCompletedObjectByIndex(id);
         } catch (RuntimeException e) {
