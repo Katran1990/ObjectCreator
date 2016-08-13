@@ -5,7 +5,7 @@ import com.katran.objectcreator.model.SimpleObject;
 
 import java.util.List;
 
-public interface ObjectDAO {
+public interface ObjectDAO{
     SimpleObject getCompletedSubjectByIndex(int index);
 
     List<SimpleObject> getListOfCompletedSubjects();

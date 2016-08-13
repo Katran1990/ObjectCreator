@@ -26,6 +26,10 @@ import java.util.Map;
 @Controller
 public class CreatorController {
 
+    private static final String ERROR = "error";
+    private static final String CREATED_OBJECT = "createdObject";
+    private static final int NUMBER_OF_OBJECTS = 3;
+
     @Autowired
     private AssemblyService assemblyService;
 
@@ -34,8 +38,6 @@ public class CreatorController {
 
     @Autowired
     private WeatherService weatherService;
-
-    private static final int NUMBER_OF_OBJECTS = 3;
 
     @GetMapping(value = "/")
     public ModelAndView welcome() throws Exception {
@@ -62,16 +64,16 @@ public class CreatorController {
         model.addObject("componentWrapper", componentWrapper);
 
         HttpSession session = request.getSession();
-        Object error = session.getAttribute("error");
+        Object error = session.getAttribute(ERROR);
         if (error != null) {
-            model.addObject("error", error);
-            session.removeAttribute("error");
+            model.addObject(ERROR, error);
+            session.removeAttribute(ERROR);
         }
 
-        Object createdObject = session.getAttribute("createdObject");
+        Object createdObject = session.getAttribute(CREATED_OBJECT);
         if (createdObject != null) {
-            model.addObject("createdObject", createdObject);
-            session.removeAttribute("createdObject");
+            model.addObject(CREATED_OBJECT, createdObject);
+            session.removeAttribute(CREATED_OBJECT);
         }
         return model;
     }
@@ -81,26 +83,26 @@ public class CreatorController {
     public String submitCreatorForm(@ModelAttribute("componentWrapper") ObjectComponentWrapper componentWrapper, HttpServletRequest request) throws ServletException, IOException {
         List<String> materialList = new ArrayList<String>();
         List<String> qualityList = new ArrayList<String>();
-        for (int i = 0; i<componentWrapper.getComponentList().size(); i++){
-            ObjectComponent objectComponent = componentWrapper.getComponentList().get(i);
-            if (objectComponent.getMaterial()!=null){
-                materialList.add(objectComponent.getMaterial());
-                qualityList.add(objectComponent.getQuality());
+        for (ObjectComponent component:componentWrapper.getComponentList()){
+            if (component.getMaterial()!=null){
+                materialList.add(component.getMaterial());
+                qualityList.add(component.getQuality());
             }
         }
 
         HttpSession session = request.getSession();
-        SimpleObject createdObject = null;
-        if (materialList.size() > 0) {
+        SimpleObject createdObject;
+        if (materialList.size() <= 0) {
+            session.setAttribute(ERROR, "An input error! Please, select at least one component.");
+        }
+        else {
             try {
                 createdObject = assemblyService.assemblyOfObject(materialList, qualityList);
                 manager.saveObject(createdObject);
+                session.setAttribute(CREATED_OBJECT, createdObject.toString());
             } catch (SQLException e) {
-                e.printStackTrace();
+                session.setAttribute(ERROR, "An error has been occurred during execution of application.");
             }
-            session.setAttribute("createdObject", createdObject.toString());
-        } else {
-            session.setAttribute("error", "An input error! Please, select at least one component.");
         }
         return "redirect:/creator";
     }

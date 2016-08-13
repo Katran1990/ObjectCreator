@@ -16,7 +16,7 @@ public class AssemblyService {
     @Autowired
     private ObjectManager manager;
 
-    private static final String RANDOM = "rnd";
+    private static final String RANDOM_VALUE = "rnd";
     private static final Integer MAX_NUMBER_OF_COMPONENTS = 3;
     private static final Double FINE_MULTIPLIER = 0.25;
 
@@ -34,7 +34,7 @@ public class AssemblyService {
             component = getMaterialFromList(materialList);
         } else {
             component = materialList.get(0);
-            if (component.equals(RANDOM)) {
+            if (component.equals(RANDOM_VALUE)) {
                 component = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
             }
         }
@@ -45,7 +45,7 @@ public class AssemblyService {
         double fine = (MAX_NUMBER_OF_COMPONENTS - qualityList.size()) * FINE_MULTIPLIER;
         double qualityOfMaterials = 0;
         for (int i = 0; i < qualityList.size(); i++) {
-            if (qualityList.get(i).equals(RANDOM)) {
+            if (qualityList.get(i).equals(RANDOM_VALUE)) {
                 qualityList.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("sources"))));
             }
             qualityOfMaterials += manager.getSourceQualityByName(qualityList.get(i));
@@ -64,7 +64,7 @@ public class AssemblyService {
 
         for (int i = 0; i < materialList.size(); i++) {
             String element = materialList.get(i);
-            if (element.equals(RANDOM)) {
+            if (element.equals(RANDOM_VALUE)) {
                 element = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
             }
             preparedMaterials.add(element);
