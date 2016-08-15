@@ -6,55 +6,29 @@ import com.katran.objectcreator.model.SimpleObject;
 import java.util.List;
 
 public interface ObjectManager {
-    SimpleObject getCompletedObjectByIndex(int index);
+    SimpleObject getCreatedObjectByID(int id);
 
-    List<SimpleObject> getListOfCompletedObjects();
+    List<SimpleObject> getCreatedObjects();
 
-    List<String> getListOfSources();
+    List<String> getSources();
 
-    List<String> getListOfMaterials();
+    List<String> getMaterials();
 
-    Integer getNumberOfRowsInTable(String table);
+    Integer getTableSize(String table);
 
-    String getMaterialNameByIndex(int index);
+    String getMaterialNameByID(int id);
 
-    Integer getMaterialIDByName(String name);
+    String getSubjectNameByID(int id);
 
-    String getSubjectNameByIndex(int index);
-
-    Integer getSubjectIDByName(String name);
-
-    String getQualityNameByIndex(int index);
-
-    Integer getQualityIDByName(String name);
-
-    String getSourceNameByIndex(int index);
-
-    Integer getSourceIDByName(String name);
+    String getSourceNameByID(int id);
 
     Double getSourceQualityByName(String name);
 
     String getProductionQuality(double value);
 
-    void saveObject(SimpleObject twObject);
+    Integer saveObject(SimpleObject twObject);
 
-    void updateObject(Integer id, SimpleObject twObject);
+    Integer updateObject(Integer id, SimpleObject twObject);
 
     void deleteObject(Integer id);
-
-    void deleteAllObjects();
-
-    List<Material> getAllMaterials();
-
-    Material getMaterial(Integer id);
-
-    Material getMaterial(String name);
-
-    void addMaterial(String material);
-
-    Material deleteMaterial(Integer id);
-
-    Material deleteMaterial(String name);
-
-    void updateMaterial(Integer id, String name);
 }

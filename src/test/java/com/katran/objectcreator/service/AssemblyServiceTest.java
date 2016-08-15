@@ -28,7 +28,7 @@ public class AssemblyServiceTest {
         Method method = AssemblyService.class.getDeclaredMethod("getRandomValue", int.class, int.class);
         method.setAccessible(true);
         int i = (Integer) method.invoke(assemblyService, 1, 5);
-        assert (i>=1&&i<=5);
+        assert (i >= 1 && i <= 5);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class AssemblyServiceTest {
         Method method = AssemblyService.class.getDeclaredMethod("defineTheMaterial", List.class);
         method.setAccessible(true);
         String result = (String) method.invoke(assemblyService, materialList);
-        materialList = manager.getListOfMaterials();
+        materialList = manager.getMaterials();
         assert (materialList.contains(result));
     }
 
@@ -52,7 +52,7 @@ public class AssemblyServiceTest {
         Method method = AssemblyService.class.getDeclaredMethod("defineTheQuality", List.class);
         method.setAccessible(true);
         Double result = (Double) method.invoke(assemblyService, qualityList);
-        assert (1.0==result);
+        assert (1.0 == result);
     }
 
     @Test
@@ -70,11 +70,11 @@ public class AssemblyServiceTest {
     public void testAssemblyOfObject() throws SQLException {
         List<String> materialList = new ArrayList<String>();
         List<String> qualityList = new ArrayList<String>();
-        for (int i=0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             materialList.add("wood");
             qualityList.add("excellent");
         }
         SimpleObject result = assemblyService.assemblyOfObject(materialList, qualityList);
-        assert ("wood".equals(result.getMaterial())&&"excellent".equals(result.getQuality()));
+        assert ("wood".equals(result.getMaterial()) && "excellent".equals(result.getQuality()));
     }
 }

@@ -24,7 +24,7 @@ public class AssemblyService {
         String resultMaterial = defineTheMaterial(materialList);
         double quality = defineTheQuality(qualityList);
         String resultQuality = manager.getProductionQuality(quality);
-        String resultObject = manager.getSubjectNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("objects")));
+        String resultObject = manager.getSubjectNameByID(getRandomValue(1, manager.getTableSize("objects")));
         return new SimpleObject(resultObject, resultQuality, resultMaterial);
     }
 
@@ -35,7 +35,7 @@ public class AssemblyService {
         } else {
             component = materialList.get(0);
             if (component.equals(RANDOM_VALUE)) {
-                component = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
+                component = manager.getMaterialNameByID(getRandomValue(1, manager.getTableSize("materials")));
             }
         }
         return component;
@@ -46,7 +46,7 @@ public class AssemblyService {
         double qualityOfMaterials = 0;
         for (int i = 0; i < qualityList.size(); i++) {
             if (qualityList.get(i).equals(RANDOM_VALUE)) {
-                qualityList.set(i, manager.getSourceNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("sources"))));
+                qualityList.set(i, manager.getSourceNameByID(getRandomValue(1, manager.getTableSize("sources"))));
             }
             qualityOfMaterials += manager.getSourceQualityByName(qualityList.get(i));
         }
@@ -65,7 +65,7 @@ public class AssemblyService {
         for (int i = 0; i < materialList.size(); i++) {
             String element = materialList.get(i);
             if (element.equals(RANDOM_VALUE)) {
-                element = manager.getMaterialNameByIndex(getRandomValue(1, manager.getNumberOfRowsInTable("materials")));
+                element = manager.getMaterialNameByID(getRandomValue(1, manager.getTableSize("materials")));
             }
             preparedMaterials.add(element);
         }

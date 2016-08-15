@@ -7,7 +7,7 @@ public class ObjectComponent {
     private String material;
     private String quality;
 
-    public ObjectComponent(){
+    public ObjectComponent() {
 
     }
 

@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import static org.junit.Assert.*;
 
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class WeatherServiceTest {
 
     @Test
     public void testGetWeather() throws IOException {
-        assertEquals("Odessa",weatherService.getWeather().get("city"));
+        assertEquals("Odessa", weatherService.getWeather().get("city"));
     }
 
 }

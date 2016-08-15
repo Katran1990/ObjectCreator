@@ -8,10 +8,8 @@ public class SimpleObject {
     private String material;
 
     public SimpleObject(int id, String subject, String quality, String material) {
+        this(subject,quality,material);
         this.id = id;
-        this.subject = subject;
-        this.quality = quality;
-        this.material = material;
     }
 
     public SimpleObject(String subject, String quality, String material) {
@@ -25,6 +23,7 @@ public class SimpleObject {
 
     @Override
     public String toString() {
+        //TODO string utils
         return quality + " " + material + " " + subject;
     }
 

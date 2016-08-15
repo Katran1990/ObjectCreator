@@ -13,7 +13,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>2.6</version>
                 <configuration>
                     <warName>object-creator</warName>
                     <outputDirectory>${deployment-dir}\webapps\</outputDirectory>
@@ -44,6 +44,8 @@
         <google-gson>2.7</google-gson>
         <apache-httpclient>4.5.2</apache-httpclient>
         <org.mockito>1.10.19</org.mockito>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>

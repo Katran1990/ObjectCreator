@@ -10,10 +10,10 @@ public class ObjectComponentWrapper {
 
     private List<ObjectComponent> componentList;
 
-    public ObjectComponentWrapper(){
+    public ObjectComponentWrapper() {
     }
 
-    public ObjectComponentWrapper(List<ObjectComponent> componentList){
+    public ObjectComponentWrapper(List<ObjectComponent> componentList) {
         this.componentList = componentList;
     }
 

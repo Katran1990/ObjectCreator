@@ -52,12 +52,12 @@ public class CreatorController {
     @GetMapping(value = "/creator")
     public ModelAndView getCreatorForm(HttpServletRequest request) throws IOException {
         ModelAndView model = new ModelAndView("creator");
-        List<String> materialList = manager.getListOfMaterials();
-        List<String> qualityList = manager.getListOfSources();
+        List<String> materialList = manager.getMaterials();
+        List<String> qualityList = manager.getSources();
         model.addObject("materials", materialList);
         model.addObject("qualities", qualityList);
         ArrayList<ObjectComponent> componentList = new ArrayList<ObjectComponent>();
-        for (int i = 0; i< NUMBER_OF_OBJECTS; i++){
+        for (int i = 0; i < NUMBER_OF_OBJECTS; i++) {
             componentList.add(i, new ObjectComponent());
         }
         ObjectComponentWrapper componentWrapper = new ObjectComponentWrapper(componentList);
@@ -83,8 +83,8 @@ public class CreatorController {
     public String submitCreatorForm(@ModelAttribute("componentWrapper") ObjectComponentWrapper componentWrapper, HttpServletRequest request) throws ServletException, IOException {
         List<String> materialList = new ArrayList<String>();
         List<String> qualityList = new ArrayList<String>();
-        for (ObjectComponent component:componentWrapper.getComponentList()){
-            if (component.getMaterial()!=null){
+        for (ObjectComponent component : componentWrapper.getComponentList()) {
+            if (component.getMaterial() != null) {
                 materialList.add(component.getMaterial());
                 qualityList.add(component.getQuality());
             }
@@ -92,16 +92,16 @@ public class CreatorController {
 
         HttpSession session = request.getSession();
         SimpleObject createdObject;
-        if (materialList.size() <= 0) {
+        if (materialList.isEmpty()) {
             session.setAttribute(ERROR, "An input error! Please, select at least one component.");
-        }
-        else {
+        } else {
             try {
                 createdObject = assemblyService.assemblyOfObject(materialList, qualityList);
                 manager.saveObject(createdObject);
-                session.setAttribute(CREATED_OBJECT, createdObject.toString());
+                session.setAttribute(CREATED_OBJECT, createdObject);
             } catch (SQLException e) {
-                session.setAttribute(ERROR, "An error has been occurred during execution of application.");
+                //TODO normal error msg
+                session.setAttribute(ERROR, "");
             }
         }
         return "redirect:/creator";
@@ -110,7 +110,7 @@ public class CreatorController {
     @GetMapping(value = "/viewer")
     public ModelAndView viewCreatorObjects() throws IOException {
         ModelAndView model = new ModelAndView("viewer");
-        List<SimpleObject> objects = manager.getListOfCompletedObjects();
+        List<SimpleObject> objects = manager.getCreatedObjects();
         model.addObject("objects", objects);
         return model;
     }
