@@ -25,7 +25,6 @@ public class WeatherService {
         CloseableHttpClient client = HttpClientBuilder.create().build();
         HttpGet httpGet = new HttpGet("http://api.openweathermap.org/data/2.5/weather?id=698740&units=metric&APPID=c8dfeb9c92d335d8b9dde435c86d5dd3");
         //TODO
-        httpGet.addHeader("User-Agent", "Chrome/52.0.2743.116");
         CloseableHttpResponse response = client.execute(httpGet);
         BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
         String inputLine;

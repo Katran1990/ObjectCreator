@@ -54,18 +54,14 @@ public class ObjectManagerImpl implements ObjectManager {
         return dao.getProductionQuality(value);
     }
 
-    //TODO
-    @Transactional
     public Integer saveObject(SimpleObject twObject) {
         return dao.saveObject(twObject);
     }
 
-    @Transactional
     public Integer updateObject(Integer id, SimpleObject twObject) {
         return dao.updateObject(id, twObject);
     }
 
-    @Transactional
     public void deleteObject(Integer id) {
         dao.deleteObject(id);
     }

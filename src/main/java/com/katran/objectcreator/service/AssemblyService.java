@@ -20,7 +20,7 @@ public class AssemblyService {
     private static final Integer MAX_NUMBER_OF_COMPONENTS = 3;
     private static final Double FINE_MULTIPLIER = 0.25;
 
-    public SimpleObject assemblyOfObject(List<String> materialList, List<String> qualityList) throws SQLException {
+    public SimpleObject assemblyOfObject(List<String> materialList, List<String> qualityList) {
         String resultMaterial = defineTheMaterial(materialList);
         double quality = defineTheQuality(qualityList);
         String resultQuality = manager.getProductionQuality(quality);
@@ -28,7 +28,7 @@ public class AssemblyService {
         return new SimpleObject(resultObject, resultQuality, resultMaterial);
     }
 
-    private String defineTheMaterial(List<String> materialList) throws SQLException {
+    private String defineTheMaterial(List<String> materialList) {
         String component;
         if (materialList.size() > 1) {
             component = getMaterialFromList(materialList);
@@ -41,7 +41,7 @@ public class AssemblyService {
         return component;
     }
 
-    private double defineTheQuality(List<String> qualityList) throws SQLException {
+    private double defineTheQuality(List<String> qualityList) {
         double fine = (MAX_NUMBER_OF_COMPONENTS - qualityList.size()) * FINE_MULTIPLIER;
         double qualityOfMaterials = 0;
         for (int i = 0; i < qualityList.size(); i++) {
@@ -59,8 +59,8 @@ public class AssemblyService {
         return (startRange + (int) (Math.random() * ((endRange - startRange) + 1)));
     }
 
-    private String getMaterialFromList(List<String> materialList) throws SQLException {
-        List<String> preparedMaterials = new ArrayList<String>();
+    private String getMaterialFromList(List<String> materialList) {
+        List<String> preparedMaterials = new ArrayList<>();
 
         for (int i = 0; i < materialList.size(); i++) {
             String element = materialList.get(i);

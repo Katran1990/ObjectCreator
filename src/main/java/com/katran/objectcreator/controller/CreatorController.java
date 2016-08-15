@@ -29,6 +29,9 @@ public class CreatorController {
     private static final String ERROR = "error";
     private static final String CREATED_OBJECT = "createdObject";
     private static final int NUMBER_OF_OBJECTS = 3;
+    private static final String CITY = "city";
+    private static final String TEMPERATURE = "temp";
+    private static final String WIND = "wind";
 
     @Autowired
     private AssemblyService assemblyService;
@@ -43,9 +46,9 @@ public class CreatorController {
     public ModelAndView welcome() throws Exception {
         ModelAndView model = new ModelAndView("index");
         Map<String, Object> weatherData = weatherService.getWeather();
-        model.addObject("city", weatherData.get("city"));
-        model.addObject("temp", weatherData.get("temp"));
-        model.addObject("wind", weatherData.get("wind"));
+        model.addObject(CITY, weatherData.get(CITY));
+        model.addObject(TEMPERATURE, weatherData.get(TEMPERATURE));
+        model.addObject(WIND, weatherData.get(WIND));
         return model;
     }
 
@@ -56,7 +59,7 @@ public class CreatorController {
         List<String> qualityList = manager.getSources();
         model.addObject("materials", materialList);
         model.addObject("qualities", qualityList);
-        ArrayList<ObjectComponent> componentList = new ArrayList<ObjectComponent>();
+        ArrayList<ObjectComponent> componentList = new ArrayList<>();
         for (int i = 0; i < NUMBER_OF_OBJECTS; i++) {
             componentList.add(i, new ObjectComponent());
         }
@@ -69,7 +72,6 @@ public class CreatorController {
             model.addObject(ERROR, error);
             session.removeAttribute(ERROR);
         }
-
         Object createdObject = session.getAttribute(CREATED_OBJECT);
         if (createdObject != null) {
             model.addObject(CREATED_OBJECT, createdObject);
@@ -81,28 +83,21 @@ public class CreatorController {
 
     @PostMapping(value = "/creator")
     public String submitCreatorForm(@ModelAttribute("componentWrapper") ObjectComponentWrapper componentWrapper, HttpServletRequest request) throws ServletException, IOException {
-        List<String> materialList = new ArrayList<String>();
-        List<String> qualityList = new ArrayList<String>();
-        for (ObjectComponent component : componentWrapper.getComponentList()) {
-            if (component.getMaterial() != null) {
-                materialList.add(component.getMaterial());
-                qualityList.add(component.getQuality());
-            }
-        }
+        List<String> materialList = new ArrayList<>();
+        List<String> qualityList = new ArrayList<>();
+        componentWrapper.getComponentList().stream().filter(component -> component.getMaterial() != null).forEach(component -> {
+            materialList.add(component.getMaterial());
+            qualityList.add(component.getQuality());
+        });
 
         HttpSession session = request.getSession();
         SimpleObject createdObject;
         if (materialList.isEmpty()) {
             session.setAttribute(ERROR, "An input error! Please, select at least one component.");
         } else {
-            try {
-                createdObject = assemblyService.assemblyOfObject(materialList, qualityList);
-                manager.saveObject(createdObject);
-                session.setAttribute(CREATED_OBJECT, createdObject);
-            } catch (SQLException e) {
-                //TODO normal error msg
-                session.setAttribute(ERROR, "");
-            }
+            createdObject = assemblyService.assemblyOfObject(materialList, qualityList);
+            manager.saveObject(createdObject);
+            session.setAttribute(CREATED_OBJECT, createdObject);
         }
         return "redirect:/creator";
     }

@@ -16,7 +16,7 @@
                 <version>2.6</version>
                 <configuration>
                     <warName>object-creator</warName>
-                    <outputDirectory>${deployment-dir}\webapps\</outputDirectory>
+                    <outputDirectory>${deployment-dir}</outputDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>

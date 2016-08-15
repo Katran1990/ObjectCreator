@@ -8,7 +8,6 @@ import java.util.List;
 public interface ObjectDAO {
     SimpleObject getCreatedObjectByID(int id);
 
-    //TODO delete list
     List<SimpleObject> getCreatedObjects();
 
     List<String> getSources();
@@ -19,13 +18,7 @@ public interface ObjectDAO {
 
     String getMaterialNameByID(int id);
 
-    Integer getMaterialIDByName(String name);
-
     String getSubjectNameByID(int id);
-
-    Integer getSubjectIDByName(String name);
-
-    Integer getQualityIDByName(String name);
 
     String getSourceNameByID(int id);
 

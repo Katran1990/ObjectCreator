@@ -68,20 +68,8 @@ public class ObjectDAOImpl implements ObjectDAO {
         return template.queryForObject("SELECT name FROM materials WHERE id = ?", new Object[]{id}, String.class);
     }
 
-    public Integer getMaterialIDByName(String name) {
-        return template.queryForObject("SELECT id FROM materials WHERE name = ?", new Object[]{name}, Integer.class);
-    }
-
     public String getSubjectNameByID(int id) {
         return template.queryForObject("SELECT name FROM objects WHERE id = ?", new Object[]{id}, String.class);
-    }
-
-    public Integer getSubjectIDByName(String name) {
-        return template.queryForObject("SELECT id FROM objects WHERE name = ?", new Object[]{name}, Integer.class);
-    }
-
-    public Integer getQualityIDByName(String name) {
-        return template.queryForObject("SELECT id FROM production_quality WHERE name = ?", new Object[]{name}, Integer.class);
     }
 
     public String getSourceNameByID(int id) {
@@ -98,10 +86,10 @@ public class ObjectDAOImpl implements ObjectDAO {
 
     public Integer saveObject(SimpleObject twObject) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
-        final String select = "SELECT o.id AS object, s.id AS quality, m.id AS material " +
-                "FROM objects AS o, sources AS s, materials AS m " +
+        final String select = "SELECT o.id AS object, pq.id AS quality, m.id AS material " +
+                "FROM objects AS o, production_quality AS pq, materials AS m " +
                 "WHERE o.name = (?) " +
-                "AND s.name = (?) " +
+                "AND pq.name = (?) " +
                 "AND m.name = (?)";
         try {
             Map<String, Object> result = template.queryForMap(select, twObject.getSubject(), twObject.getQuality(), twObject.getMaterial());
