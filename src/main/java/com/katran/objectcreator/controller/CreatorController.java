@@ -1,11 +1,14 @@
 package com.katran.objectcreator.controller;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.katran.objectcreator.model.ObjectComponent;
 import com.katran.objectcreator.model.ObjectComponentWrapper;
 import com.katran.objectcreator.service.AssemblyService;
 import com.katran.objectcreator.service.ObjectManager;
 import com.katran.objectcreator.model.SimpleObject;
 import com.katran.objectcreator.service.WeatherService;
+import net.aksingh.owmjapis.CurrentWeather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +22,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +36,8 @@ public class CreatorController {
     private static final String CITY = "city";
     private static final String TEMPERATURE = "temp";
     private static final String WIND = "wind";
+    private static final String NO_DATA = "NO DATA";
+
 
     @Autowired
     private AssemblyService assemblyService;
@@ -45,10 +51,16 @@ public class CreatorController {
     @GetMapping(value = "/")
     public ModelAndView welcome() throws Exception {
         ModelAndView model = new ModelAndView("index");
-        Map<String, Object> weatherData = weatherService.getWeather();
-        model.addObject(CITY, weatherData.get(CITY));
-        model.addObject(TEMPERATURE, weatherData.get(TEMPERATURE));
-        model.addObject(WIND, weatherData.get(WIND));
+        CurrentWeather weather = weatherService.getWeather();
+        if (weather.isValid()) {
+            model.addObject(CITY, weather.getCityName());
+            model.addObject(TEMPERATURE, weather.getMainInstance().getTemperature());
+            model.addObject(WIND, weather.getWindInstance().getWindSpeed());
+        } else {
+            model.addObject(CITY, NO_DATA);
+            model.addObject(TEMPERATURE, NO_DATA);
+            model.addObject(WIND, NO_DATA);
+        }
         return model;
     }
 
@@ -109,5 +121,4 @@ public class CreatorController {
         model.addObject("objects", objects);
         return model;
     }
-
 }

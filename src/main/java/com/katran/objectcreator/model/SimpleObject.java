@@ -23,8 +23,7 @@ public class SimpleObject {
 
     @Override
     public String toString() {
-        //TODO string utils
-        return quality + " " + material + " " + subject;
+        return String.join(" ", quality, material, subject);
     }
 
     public String getSubject() {

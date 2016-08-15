@@ -36,17 +36,19 @@
         <apache.dbcp2>2.1.1</apache.dbcp2>
         <spring.jdbc>4.2.5.RELEASE</spring.jdbc>
         <spring.test>4.3.2.RELEASE</spring.test>
-        <spring-tx>4.3.0.RELEASE</spring-tx>
-        <spring-mvc>4.3.0.RELEASE</spring-mvc>
-        <spring-aop>4.3.0.RELEASE</spring-aop>
-        <webjars-bootstrap>3.3.6</webjars-bootstrap>
-        <webjars-jquery>3.0.0</webjars-jquery>
-        <google-gson>2.7</google-gson>
-        <apache-httpclient>4.5.2</apache-httpclient>
+        <spring.tx>4.3.0.RELEASE</spring.tx>
+        <spring.mvc>4.3.0.RELEASE</spring.mvc>
+        <spring.aop>4.3.0.RELEASE</spring.aop>
+        <google.gson>2.7</google.gson>
+        <apache.httpclient>4.5.2</apache.httpclient>
         <org.mockito>1.10.19</org.mockito>
+        <apache.httpcomponents>4.2.3</apache.httpcomponents>
+        <org.json>20090211</org.json>
+        <net.aksingh>2.5.0.3</net.aksingh>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -109,42 +111,42 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${spring-tx}</version>
+            <version>${spring.tx}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${spring-mvc}</version>
+            <version>${spring.mvc}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${spring-aop}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>${webjars-bootstrap}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>${webjars-jquery}</version>
+            <version>${spring.aop}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>${google-gson}</version>
+            <version>${google.gson}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>${apache-httpclient}</version>
+            <version>${apache.httpclient}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>${org.mockito}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.aksingh</groupId>
+            <artifactId>owm-japis</artifactId>
+            <version>${net.aksingh}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json}</version>
         </dependency>
     </dependencies>
 </project>

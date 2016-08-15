@@ -26,7 +26,7 @@ public interface ObjectManager {
 
     String getProductionQuality(double value);
 
-    Integer saveObject(SimpleObject twObject);
+    Integer saveObject(SimpleObject newObject);
 
     Integer updateObject(Integer id, SimpleObject twObject);
 

@@ -4,7 +4,6 @@ import com.katran.objectcreator.database.ObjectDAO;
 import com.katran.objectcreator.model.SimpleObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -54,8 +53,8 @@ public class ObjectManagerImpl implements ObjectManager {
         return dao.getProductionQuality(value);
     }
 
-    public Integer saveObject(SimpleObject twObject) {
-        return dao.saveObject(twObject);
+    public Integer saveObject(SimpleObject newObject) {
+        return dao.saveObject(newObject);
     }
 
     public Integer updateObject(Integer id, SimpleObject twObject) {
