@@ -86,7 +86,7 @@ public class ObjectDAOImpl implements ObjectDAO {
     }
 
     public Integer saveObject(SimpleObject newObject) {
-        NDC.push("saving the object to database");
+        LOGGER.info("saving the object to database");
         KeyHolder keyHolder = new GeneratedKeyHolder();
         final String select = "SELECT o.id AS object, pq.id AS quality, m.id AS material " +
                 "FROM objects AS o, production_quality AS pq, materials AS m " +
@@ -105,12 +105,12 @@ public class ObjectDAOImpl implements ObjectDAO {
             return keyHolder.getKey().intValue();
         } catch (DataAccessException e) {
             LOGGER.error(e.getMessage(), e.getCause());
-            NDC.pop();
             return -1;
         }
     }
 
     public Integer updateObject(Integer id, SimpleObject twObject) {
+        LOGGER.info("updating the object in database");
         final String select = "SELECT o.id AS object, s.id AS quality, m.id AS material " +
                 "FROM objects AS o, sources AS s, materials AS m " +
                 "WHERE o.name = (?) " +
@@ -121,11 +121,13 @@ public class ObjectDAOImpl implements ObjectDAO {
             template.update("UPDATE object_list SET object = (?), quality = (?), material = (?) WHERE id = (?)", result.get("object"), result.get("quality"), result.get("material"), id);
             return id;
         } catch (DataAccessException e) {
+            LOGGER.error(e.getMessage(), e.getCause());
             return -1;
         }
     }
 
     public void deleteObject(Integer id) {
+        LOGGER.info("deleting the object from database");
         template.update("DELETE FROM object_list WHERE id = (?)", id);
     }
 

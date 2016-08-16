@@ -23,13 +23,11 @@ public class SimpleObjectController {
         return new ResponseEntity<>(manager.getCreatedObjectByID(id), HttpStatus.OK);
     }
 
-    //Ready
     @PostMapping(value = "/")
     public ResponseEntity<SimpleObject> addSimpleObject(@RequestBody SimpleObject newObject) {
         return new ResponseEntity<>(manager.getCreatedObjectByID(manager.saveObject(newObject)), HttpStatus.OK);
     }
 
-    //Ready
     @PutMapping(value = "/{id}")
     public ResponseEntity<SimpleObject> putSimpleObject(@PathVariable Integer id, @RequestBody SimpleObject newObject) {
         return new ResponseEntity<>(manager.getCreatedObjectByID(manager.updateObject(id, newObject)), HttpStatus.OK);

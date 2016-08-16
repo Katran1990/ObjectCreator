@@ -7,7 +7,7 @@
 
     <context:component-scan base-package="com.katran.objectcreator"/>
     <context:annotation-config/>
-    <context:property-placeholder location="classpath:jdbc/jdbc.properties"/>
+    <context:property-placeholder location="classpath:jdbc/creator.properties"/>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg name="dataSource" ref="dataSource"/>
@@ -22,6 +22,11 @@
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="openWeatherMap" class="net.aksingh.owmjapis.OpenWeatherMap">
+        <constructor-arg name="units" value="${owm.units}"/>
+        <constructor-arg name="apiKey" value="${owm.apikey}"/>
     </bean>
 
     <mvc:annotation-driven/>

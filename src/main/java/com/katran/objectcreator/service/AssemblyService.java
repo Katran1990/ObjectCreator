@@ -1,8 +1,11 @@
 package com.katran.objectcreator.service;
 
 import com.katran.objectcreator.model.SimpleObject;
+import org.apache.commons.logging.Log;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.reflect.generics.reflectiveObjects.LazyReflectiveObjectGenerator;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -16,11 +19,13 @@ public class AssemblyService {
     @Autowired
     private ObjectManager manager;
 
+    private static final Logger LOGGER = Logger.getLogger(AssemblyService.class);
     private static final String RANDOM_VALUE = "rnd";
     private static final Integer MAX_NUMBER_OF_COMPONENTS = 3;
     private static final Double FINE_MULTIPLIER = 0.25;
 
     public SimpleObject assemblyOfObject(List<String> materialList, List<String> qualityList) {
+        LOGGER.info("assembling of object");
         String resultMaterial = defineTheMaterial(materialList);
         double quality = defineTheQuality(qualityList);
         String resultQuality = manager.getProductionQuality(quality);
@@ -29,6 +34,7 @@ public class AssemblyService {
     }
 
     private String defineTheMaterial(List<String> materialList) {
+        LOGGER.info("defining type of material");
         String component;
         if (materialList.size() > 1) {
             component = getMaterialFromList(materialList);
@@ -42,6 +48,7 @@ public class AssemblyService {
     }
 
     private double defineTheQuality(List<String> qualityList) {
+        LOGGER.info("defining type of quality");
         double fine = (MAX_NUMBER_OF_COMPONENTS - qualityList.size()) * FINE_MULTIPLIER;
         double qualityOfMaterials = 0;
         for (int i = 0; i < qualityList.size(); i++) {
@@ -60,6 +67,7 @@ public class AssemblyService {
     }
 
     private String getMaterialFromList(List<String> materialList) {
+        LOGGER.info("getting type of material from list");
         List<String> preparedMaterials = new ArrayList<>();
 
         for (int i = 0; i < materialList.size(); i++) {
